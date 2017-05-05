@@ -27,8 +27,8 @@ navbar:
     title: Blog
   - slug: year-archive
     title: Archives
-  - slug: categories
-    title: Categories
+  - slug: tags
+    title: Tags
   - slug: about
     title: About
 
@@ -72,6 +72,9 @@ comments: true
 sass:
   sass_dir: _scss
   style: compressed # expanded
+
+tag_page_layout: tag_page
+tag_page_dir: tag
 
 
 

@@ -299,6 +299,7 @@ body.home {
   @extend %clearfix;
   text-align: center;
   margin-right: 2em;
+  margin-left: -2em;
 
   li {
     padding: 0 .4em;
