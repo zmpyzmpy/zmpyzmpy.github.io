@@ -256,8 +256,8 @@ body.home {
 .post-list {
   .post {
     @extend .card;
-
-    a {
+  .pp{
+       a {
       color: $base-font-color;
 
       &:hover,
@@ -266,6 +266,9 @@ body.home {
         color: $primary-color;
       }
     }
+
+    }
+
   }
 }
 

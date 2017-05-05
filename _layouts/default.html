@@ -27,17 +27,49 @@
               </header>
               <div class="card-content">
                 <div class="content nice-text">
-                  <ul>
+                  
                   {% for post in site.posts limit:3 %}
-                  <li><a href="{{ post.url }}">
+                  <li><a href="{{ post.url }}" style="margin-left:-1.5em;">
                     {{ post.title }}
                   </a></li>
                   {% endfor %}
-                  </ul>
+                  
                 </div>
               </div>
             </div>
           </div>
+
+
+          <div class="tile is-child widget">
+
+            <div class="card">
+              <header class="card-header">
+                <p class="card-header-title nice-title">
+                  Archives
+                </p>
+              </header>
+              <div class="card-content">
+                <div class="content nice-text">
+
+{% assign counter = 0 %}
+{% for post in site.posts %}
+{% comment %}
+  {% assign thisyear = post.date | date: "%B %Y" %}
+  {% assign prevyear = post.previous.date | date: "%B %Y" %}
+{% endcomment %}
+  {% assign thisyear = post.date | date: "%Y" %}
+  {% assign prevyear = post.previous.date | date: "%Y" %}
+  {% assign counter = counter | plus: 1 %}
+  {% if thisyear != prevyear %}
+    <a href="{{site.baseurl}}/year-archive/#{{thisyear}}" style="margin-right:0.3em;">{{ thisyear }}({{counter}})</a></br>
+    {% assign counter = 0 %}
+  {% endif %}
+{% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div class="tile is-child widget">
 
             <div class="card">
@@ -50,10 +82,12 @@
                 <div class="content nice-text">
 <ul class="tag-cloud">
 {% for tag in site.tags %}
+    {% assign num = tag[1]|size %}
 
     <a href="{{site.baseurl}}/tags/#{{ tag | first | slugize }}" style="margin-right:0.3em;">
-      {{ tag | first }}
+      {{ tag | first }}({{num}})
     </a>
+</br>
 {% endfor %}
 </ul>
                 </div>
