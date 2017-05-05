@@ -71,9 +71,6 @@ sass:
 jekyll-archives:
   enabled:
     - categories
-    - year
-    - month
-    - tags
   layout: category_archives
   permalinks:
     category: /categories/:name/
