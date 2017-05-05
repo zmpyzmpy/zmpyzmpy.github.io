@@ -41,6 +41,14 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+  
+# jekyll-archives
+jekyll-archives:
+  enabled:
+    - categories
+  layout: category_archives
+  permalinks:
+    category: /categories/:name/
 
 markdown: kramdown
 excerpt_separator: "<!-- more -->"
