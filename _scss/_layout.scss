@@ -2,6 +2,7 @@
 =            Layout styles            =
 =====================================*/
 @import url("//fonts.googleapis.com/css?family=Open+Sans:400,300,700");
+@import url("//fonts.googleapis.com/css?family=Wendy+One");
 
 html,
 body {
@@ -53,7 +54,7 @@ body {
   }
 
   h1, a {
-    text-transform: lowercase;
+    text-transform: capitalize;
   }
 
   .navbar {

@@ -2,6 +2,6 @@
 layout: post
 title: Blogging Like a Hacker
 categories: misc
-tags: adfsaf
+tags: adfsaf zmpy
 ---
 test test
