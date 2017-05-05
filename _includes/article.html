@@ -5,6 +5,7 @@
     </h1>
     <div class="post-meta">
       <time>{{ post.date | date: "%b %-d, %Y" }}</time>
+        {% if post.categories != empty %} • {% include category_links.html categories=post.categories %}{% endif %}
     </div>
   </header>
 
