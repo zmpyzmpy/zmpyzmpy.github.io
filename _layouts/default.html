@@ -5,10 +5,68 @@
     {% include google_analytics.html %}
     <main>
       {% include header.html %}
+<div class="main-container">
+<div class="tile is-ancestor is-vertical">
+    <div class="tile is-parent">
+      <div class="tile is-8 is-child main">
 
-      <div class="container">
         {{ content }}
+
       </div>
+
+      <div class="tile is-4 is-child">
+        <div class="tile is-parent is-vertical sidebar">
+
+          <div class="tile is-child widget">
+
+            <div class="card">
+              <header class="card-header">
+                <p class="card-header-title nice-title">
+                  Recent Posts
+                </p>
+              </header>
+              <div class="card-content">
+                <div class="content nice-text">
+                  <ul>
+                  {% for post in site.posts limit:3 %}
+                  <li><a href="{{ post.url }}">
+                    {{ post.title }}
+                  </a></li>
+                  {% endfor %}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tile is-child widget">
+
+            <div class="card">
+              <header class="card-header">
+                <p class="card-header-title nice-title">
+                  Tags
+                </p>
+              </header>
+              <div class="card-content">
+                <div class="content nice-text">
+                  <ul>
+                  {% for post in site.posts limit:3 %}
+                  <li><a href="{{ post.url }}">
+                    {{ post.title }}
+                  </a></li>
+                  {% endfor %}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+</div>
+</div>
 
       {% include footer.html %}
 
