@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
+
+    <link rel="shortcut icon" type="image/jpg" href="http://localhost:4000/images/icon.jpg" >
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mingpeiyu Zhang</title>
-    <meta name="description" content="A free Jekyll theme for download">
+    <meta name="description" content="Mingpeiyu Zhang's personl website.">
 <link rel="stylesheet" href="/css/bulma.css">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="canonical" href="http://localhost:4000/blog/">
@@ -77,6 +79,15 @@ font-size:  110%;
       </ul>
     </nav>
   </div>
+      <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+      <script>
+      $(document).ready(function() {
+        $('.sliding-panel-button,.sliding-panel-fade-screen,.sliding-panel-close').on('click touchstart',function (e) {
+          $('.sliding-panel-content,.sliding-panel-fade-screen').toggleClass('is-visible');
+          e.preventDefault();
+        });
+      });
+      </script>
 </header>
 
 <div class="sliding-panel-fade-screen"></div>
@@ -285,15 +296,7 @@ font-size:  110%;
 
 
 
-      <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-      <script>
-      $(document).ready(function() {
-        $('.sliding-panel-button,.sliding-panel-fade-screen,.sliding-panel-close').on('click touchstart',function (e) {
-          $('.sliding-panel-content,.sliding-panel-fade-screen').toggleClass('is-visible');
-          e.preventDefault();
-        });
-      });
-      </script>
+
     </main>
   </body>
 </html>

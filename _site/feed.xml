@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mingpeiyu Zhang</title>
-    <description>A free Jekyll theme for download</description>
+    <description>Mingpeiyu Zhang's personl website.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 06 May 2017 11:15:04 +0200</pubDate>
-    <lastBuildDate>Sat, 06 May 2017 11:15:04 +0200</lastBuildDate>
+    <pubDate>Sat, 06 May 2017 16:48:00 +0200</pubDate>
+    <lastBuildDate>Sat, 06 May 2017 16:48:00 +0200</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
       <item>
