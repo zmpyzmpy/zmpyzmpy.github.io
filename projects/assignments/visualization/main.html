@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+    html {
+        font-size: 15px;
+        font-weight: 105px;
+    }
+
+    .axis--x path {
+        /*display: none;*/
+    }
+
+    .line,
+    .line-fuel,
+    .line-cpi,
+    .line-temp,
+    .line-Unemployment {
+        fill: none;
+        stroke: steelblue;
+        stroke-width: 1.5px;
+    }
+
+    #mouse-tracker,
+    #mouse-tracker-fuel,
+    #mouse-tracker-cpi,
+    #mouse-tracker-temp,
+    #mouse-tracker-Unemployment {
+        stroke: #E6E7E8;
+        stroke-width: 1px;
+    }
+
+    .hover-line,
+    .hover-line-fuel,
+    .hover-line-cpi,
+    .hover-line-temp,
+    .hover-line-Unemployment {
+        stroke: #E6E7E8;
+        fill: none;
+        stroke-width: 1px;
+        left: 10px;
+        shape-rendering: crispEdges;
+        opacity: 1e-6;
+    }
+
+    .hover-text,
+    .hover-text-fuel,
+    .hover-text-cpi,
+    .hover-text-temp,
+    .hover-text-Unemployment {
+        stroke: none;
+        font-size: 25px;
+        font-weight: bold;
+        fill: #000000;
+    }
+
+    .details-text,
+    .sales-text,
+    .fuel-text,
+    .cpi-text,
+    .temp-text,
+    .unemployment-text {
+        text-align: left;
+        stroke: none;
+        font-size: 25px;
+        font-weight: bold;
+        fill: #000000;
+    }
+
+    text.axis-workweek {
+        fill: #fff;
+    }
+
+    text.holiday {
+        fill: #ff0000;
+    }
+
+    text {
+        fill: #fff;
+    }
+
+    text.caption {
+        fill: #868686;
+        font-variant: uppercase;
+    }
+
+    svg *::selection {
+        background: transparent;
+    }
+
+    svg *::-moz-selection {
+        background: transparent;
+    }
+
+    svg *::-webkit-selection {
+        background: transparent;
+    }
+
+    rect.selection {
+        stroke: #333;
+        stroke-dasharray: 4px;
+        stroke-opacity: 0.5;
+        fill: transparent;
+    }
+
+    rect.cell-border {
+        stroke: #eee;
+        stroke-width: 0.3px;
+    }
+
+    rect.cell-selected {
+        stroke: rgb(51, 102, 153);
+        stroke-width: 0.5px;
+    }
+
+    rect.cell-hover {
+        fill: #fff;
+    }
+
+    rect.bordered {
+        stroke: rgba(64, 76, 87, 0.99);
+        stroke-width: 2px;
+    }
+
+    text.text-selected {
+        fill: #fff;
+    }
+
+    text.text-hover {
+        fill: #fff;
+    }
+
+    #tooltip {
+        position: absolute;
+        width: auto;
+        height: auto;
+        pointer-events: none;
+        line-height: 1;
+        font-weight: bold;
+        padding: 12px;
+        background: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        border-radius: 2px;
+        pointer-events: none;
+    }
+
+    #tooltip:after {
+        box-sizing: border-box;
+        display: inline;
+        font-size: 10px;
+        width: 100%;
+        line-height: 1;
+        color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        pointer-events: none;
+    }
+
+    #tooltip.n:after {
+        content: "\25BC";
+        margin: -1px 0 0 0;
+        top: 100%;
+        left: 0;
+        text-align: center;
+    }
+
+    #tooltip.hidden {
+        display: none;
+    }
+
+    #tooltip p {
+        margin: 0;
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .axis path,
+    .axis line,
+    .axisSort path,
+    .axisSort line {
+        fill: none;
+        stroke: #000;
+        shape-rendering: crispEdges;
+    }
+
+    .bar {
+        /*fill: orange;*/
+    }
+
+    .bar:hover,
+    .barSort:hover {
+        fill: orangered;
+    }
+
+    .x.axis path,
+    .x.axisSort path {
+        display: none;
+    }
+
+    #details {
+        float: left;
+        /*text-align: left;*/
+    }
+
+    #chart2 {
+        /*float: left;*/
+    }
+
+    #chart5 {
+        float: left;
+    }
+</style>
+
+<section id="section1" class="cd-section">
+    <div id="chart1"></div>
+    <div id="chartSORT"></div>
+    <div id="chart2"></div>
+    <div id="chart5"></div>
+    <div id="details"></div>
+    <div id="chart3"></div>
+    <div id="chart4"></div>
+    <div id="chart6"></div>
+    <div id="chart7"></div>
+</section>
+
+<div id="tooltip" class="hidden" style="left: 655px; top: 3464px;"><strong>movie:</strong> <span style="color:#2ECC71"> Freaky Friday (2003)</span></div>
+
+<script src="./js/d3.v4.min.js"></script>
+<link rel="stylesheet" href="./js/reset.css">
+<!-- CSS reset -->
+<link rel="stylesheet" href="./js/style.css">
+<script src="./js/moment.js"></script>
+<script src="./js/colorbrewer.min.js"></script>
+<script src="./js/charts.js"></script>
