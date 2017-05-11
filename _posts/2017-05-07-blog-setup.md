@@ -10,24 +10,24 @@ The OS I'm now using is [Linux Mint 18](https://www.linuxmint.com/), and I set u
 ### Jekyll environment setup
 
 First update ruby:
-```bash
+{% highlight bash %}
 $ sudo apt-get update ruby
-```
+{% endhighlight %}
 
 Then install Jekyll and Bundler gems through RubyGems
-```bash
+{% highlight bash %}
 $ gem install jekyll bundler
-```
+{% endhighlight %}
 
 If everything is set up, then just run
-```bash
+{% highlight bash %}
 $ jekyll new myblog
-```
+{% endhighlight %}
 This will create a folder **myblog** which contains all the files you need to run a blog. Then chage into this new directory and run
 
-```bash
+{% highlight bash %}
 ~/myblog $ bundle exec jekyll serve
-```
+{% endhighlight %}
 Then the blog will be hosted locally on http://localhost:4000.
 
 
@@ -37,16 +37,18 @@ Some errors I encountered:
 continue. Make sure that `gem install ffi -v '1.9.18'` succeeds before bundling.
 
 In order to install ffi, first make sure you have ruby-dev and the corresponding system dependencies installed:
-```bash
+{% highlight bash %}
 $ sudo apt-get install libpcre3 libpcre3-dev
 $ sudo apt-get install ruby-dev
-```
+{% endhighlight %}
 
 then install ffi:
 
-```bash
+{% highlight bash %}
+
 $ gem install ffi -v '1.9.18'
-```
+
+{% endhighlight %}
 
 
 ### Host on Github with custom domain
