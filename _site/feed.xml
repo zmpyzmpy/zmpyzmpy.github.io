@@ -5,9 +5,116 @@
     <description>Mingpeiyu Zhang's personal website.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 11 May 2017 22:19:53 +0200</pubDate>
-    <lastBuildDate>Thu, 11 May 2017 22:19:53 +0200</lastBuildDate>
+    <pubDate>Fri, 12 May 2017 14:25:19 +0200</pubDate>
+    <lastBuildDate>Fri, 12 May 2017 14:25:19 +0200</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
+    
+      <item>
+        <title>LDA derivation</title>
+        <description>&lt;style&gt;
+.center-image
+{
+    margin: 0 auto;
+    display: block;
+}
+&lt;/style&gt;
+
+&lt;p&gt;This derivation LDA was written by me several years ago when I was trying to understand the well known model “&lt;a href=&quot;http://www.jmlr.org/papers/volume3/blei03a/blei03a.pdf&quot;&gt;Latent Dirichlet Allocation&lt;/a&gt;”, which can be used to extract the topic of a given text corpora. That was the first time I had experience with Natural language processing (&lt;a href=&quot;https://en.wikipedia.org/wiki/Natural_language_processing&quot;&gt;NLP&lt;/a&gt;). It inspired me a lot on the research I did and some NLP projects I worked on after that.&lt;/p&gt;
+
+&lt;p&gt;Generative Process:
+For each document w in a corpus D:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Choose N&lt;script type=&quot;math/tex&quot;&gt;\sim&lt;/script&gt;Possion(&lt;script type=&quot;math/tex&quot;&gt;\xi&lt;/script&gt;).&lt;/li&gt;
+  &lt;li&gt;Choose &lt;script type=&quot;math/tex&quot;&gt;\theta\sim Dir(\alpha&lt;/script&gt;).&lt;/li&gt;
+  &lt;li&gt;For each of the &lt;script type=&quot;math/tex&quot;&gt;N&lt;/script&gt; words &lt;script type=&quot;math/tex&quot;&gt;w_{n}&lt;/script&gt;:
+    &lt;ol&gt;
+      &lt;li&gt;Choose a topic &lt;script type=&quot;math/tex&quot;&gt;z_{n}\sim&lt;/script&gt;Multinomial(&lt;script type=&quot;math/tex&quot;&gt;\xi&lt;/script&gt;)&lt;/li&gt;
+      &lt;li&gt;Choose a word &lt;script type=&quot;math/tex&quot;&gt;w&lt;/script&gt; from p(&lt;script type=&quot;math/tex&quot;&gt;w_{n}\vert z_{n},\beta&lt;/script&gt;), a mulitinomial probability conditioned on the topic &lt;script type=&quot;math/tex&quot;&gt;A_{i}&lt;/script&gt;.&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The Graphical Model can be visually shown as follows:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/posts/lda1.png&quot; alt=&quot;Graphical Model&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We can then obtain:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;p(\theta|\alpha)=\frac{\Gamma(\sum_{i=1}^{k}\alpha_{i})}{\prod_{i=1}^{k}\Gamma(\alpha_{i})}\theta_{1}^{\alpha_{1}-1}\ldots\theta_{k}^{\alpha_{k}-1}\\
+
+p(z|\theta)=\prod_{i=1}^{k}\theta_{i}^{z^{i}} \\
+
+p(w|z,\beta)=\prod_{i=1}^{k}\prod_{j=1}^{V}(\beta_{ij})^{z^{i}w^{j}} \\
+
+p(w|\alpha,\beta)=\int p(\theta|\alpha) \bigg(\prod_{n=1}^{N}\sum_{z_{n}}p(z_{n}|\theta)p(w_{n}|z_{n},\beta)\bigg)d\theta\\
+
+p(w,z)=\int p(\theta)\bigg(\prod_{n=1}^{N}p(z_{n}|\theta)p(w_{n}|z_{n})\bigg)d\theta&lt;/script&gt;
+
+&lt;p&gt;Inference:&lt;/p&gt;
+
+&lt;p&gt;The key inferectial problem that we need to solve in order to use LDA is that of computing the posterior distribution of the hidden variables given a document:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;p(\theta,z|w,\alpha,\beta)=\frac{p(\theta,z,w|\alpha,\beta)}{p(w|\alpha,\beta)}&lt;/script&gt;
+
+&lt;p&gt;Using the evidence:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;p(w|\alpha,\beta)=\int p(\theta|\alpha) \bigg(\prod_{n=1}^{N}\sum_{z_{n}}p(z_{n}|\theta)p(w_{n}|z_{n},\beta)\bigg)d\theta\\
+
+
+==&gt;\frac{\Gamma(\sum_{i}\alpha_{i})}{\prod_{i}\Gamma(\alpha_{i})} \int\bigg(\prod_{i=1}^{k}\theta_{i}^{\alpha_{i}-1}\bigg)
+\bigg(\prod_{n=1}^{N}\sum_{i=1}^{k}\prod_{j=1}^{V}(\theta_{i}\beta_{ij})^{w_{n}^{j}}\bigg)d\theta&lt;/script&gt;
+
+&lt;p&gt;Variational inference can be shown as follows:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/posts/lda2.png&quot; alt=&quot;Variational inference&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We then use&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;q(\theta,z|\gamma,\phi)=q(\theta|\gamma)\prod_{n=1}^{N}q(z_{n}|\phi_{n})&lt;/script&gt;
+
+&lt;p&gt;as a surrogate for the posterior distribution &lt;script type=&quot;math/tex&quot;&gt;p(\theta,z,w\vert\alpha,\beta)&lt;/script&gt; and we can have&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{align}
+    	\log p(w|\alpha,\beta) &amp;= \log\int\sum_{z}p(\theta,z,w,|\alpha,\beta)d\theta \\
+                           	  &amp;= \log \int\sum_{z}\frac{p(\theta,z,w|\alpha,\beta)q(\theta,z)}{q(\theta,z)}d\theta
+  \end{align} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;Then use Jensen’s inequality we have&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{align}
+    &amp;\int\sum_{z}q(\theta,z)\log p(\theta,z,w|\alpha,\beta)d\theta-\int\sum_{z}\log q(\theta,z)d\theta \\
+    &amp;= E_{q}[\log p(\theta,z,w|\alpha,\beta)]-E_{q}[\log q(\theta,z)]\\
+    &amp;= E_{q}[\log p(\theta|\alpha)]+E_{q}[\log p(z|\theta)]+E_{q}[\log p(w|z,\beta)]-E_{q}[\log q(\theta)]-E_{q}[\log q(z)]
+  \end{align} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;where&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{align}
+	E_{q}[\log p(w|z,\beta)]&amp;=E_{q}[\log(\prod_{i=1}^{k}\prod_{j=1}^{V}\beta_{ij}^{z_{ni}w^{j}_{n}})]\\
+						&amp;=\int\int \log\prod_{i=1}^{k}\prod_{j=1}^{V}\beta_{ij}^{w^{j}_{n}z_{ni}}q(\theta,z|\gamma,\phi)d\theta dz\\
+						&amp;=\int\int \log\prod_{i=1}^{k}\prod_{j=1}^{V}\beta_{ij}^{w^{j}_{n}z_{ni}}q(\theta|\gamma)\prod_{n=1}^{N}q(z_{n}|\phi_{n})d\theta dz\\
+						&amp;=\int \log\prod_{i=1}^{k}\prod_{j=1}^{V}\beta_{ij}^{w^{j}_{n}z_{ni}}\prod_{n=1}^{N}q(z_{n}|\phi_{n})dz\\
+						&amp;=\int \log\prod_{i=1}^{k}\prod_{j=1}^{V}\beta_{ij}^{w^{j}_{n}z_{ni}}dz\\
+						&amp;=\int \sum_{i=1}^{k}\sum_{j=1}^{V}w^{j}_{n}z_{ni}\log\beta_{ij}dz\\
+						&amp;=\sum_{n=1}^{N}\sum_{i=1}^{k}\sum_{j=1}^{V}w_{n}^{j}\phi_{ni}\log\beta_{ij}
+  \end{align} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;where &lt;script type=&quot;math/tex&quot;&gt;\int z_{ni}dz=\sum_{n=1}^{N}\phi_{ni}&lt;/script&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 12 May 2017 12:58:07 +0200</pubDate>
+        <link>http://localhost:4000/blog/2017/LDA-derivation/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2017/LDA-derivation/</guid>
+        
+        <category>Machine Learning</category>
+        
+        <category>NLP</category>
+        
+        
+      </item>
     
       <item>
         <title>64 bits division implemented on x86</title>
