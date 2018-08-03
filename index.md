@@ -6,7 +6,7 @@ layout: home
 
   <div class="hero-inner container">
 
-    <img src="{{ site.author.thumb | prepend: site.baseurl }}" alt="author thumb" class="dot">
+<!--     <img src="{{ site.author.thumb | prepend: site.baseurl }}" alt="author thumb" class="dot"> -->
     <h1>Hello!..</h1>
     <h3>I'm <strong itemprop="name">{{ site.author.name }}</strong>, an <em itemprop="jobTitle">{{ site.author.job }}</em>.</h3>
     <h3>{{ site.author.bio }}</h3>
