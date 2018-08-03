@@ -8,9 +8,9 @@ baseurl: ""
 # Author settings
 author:
   name      : Minegpeiyu Zhang
-  job       : Master student @ <a href="http://tue.nl">TU/e</a>
+  job       : Algorithm Engineer @ <a href="https://www.guandata.com/">Guan Data</a>
   bio       : "Grounded solidly in the basics of computer science, data science and mathematics with rich experiences both theoretical and practical."
-  thumb     : /images/face.jpg
+  # thumb     : /images/face.jpg
   email     : zmpyzmpy@gmail.com
   url       : http://zhangmpy.top
   github    : http://github.com/zmpyzmpy
