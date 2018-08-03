@@ -36,8 +36,9 @@ navbar:
 gems:
   - jekyll-feed
   - jekyll-paginate
-  #- jekyll-sitemap
+  - jekyll-sitemap
   - jekyll-archives
+  - jekyll-seo-tag
 exclude:
   - Gemfile
   - Gemfile.lock
