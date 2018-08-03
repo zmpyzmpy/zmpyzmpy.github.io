@@ -2,7 +2,7 @@
 title: Mingpeiyu Zhang
 description: "Mingpeiyu Zhang's personal website."
 keywords: "Jekyll, blog, web, computer science, data science, machine learning"
-url: http://zhangmpy.site
+url: http://zhangmpy.top
 baseurl: ""
 # baseurl: ""
 # Author settings
@@ -12,7 +12,7 @@ author:
   bio       : "Grounded solidly in the basics of computer science, data science and mathematics with rich experiences both theoretical and practical."
   thumb     : /images/face.jpg
   email     : zmpyzmpy@gmail.com
-  url       : http://zhangmpy.site
+  url       : http://zhangmpy.top
   github    : http://github.com/zmpyzmpy
   twitter   : http://twitter.com/zmpyzmpy
   facebook  : http://www.facebook.com/people/Mingpeiyu-Zhang/100007896783322
