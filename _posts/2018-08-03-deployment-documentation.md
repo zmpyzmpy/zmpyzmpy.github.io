@@ -8,6 +8,8 @@ tags:
 - Python
 ---
 
+Recently I worked on a project for unilever and they would like a web application to host the whole machine learning services. We used Flask to build the application and now I have to deploy the application on their server. Here are the steps I took.
+
 ## 1.  Install Python and setup Flask and uwsgi
 
 Since Python 3 cannot directly be installed by the package manager `yum` on **RHEL**, we need to do it manually.
@@ -368,9 +370,9 @@ socket = /home/user/tmp/myproject.sock
 ## Credits
 
 > https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-uwsgi-and-nginx-on-centos-7
->
+
 > https://serverfault.com/questions/777749/how-to-disable-timeout-for-nginx
->
+
 > https://stackoverflow.com/questions/41328451/ssl-module-in-python-is-not-available-when-installing-package-with-pip3
 
 
