@@ -5,9 +5,403 @@
     <description>Mingpeiyu Zhang's personal website.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 12 May 2017 14:25:19 +0200</pubDate>
-    <lastBuildDate>Fri, 12 May 2017 14:25:19 +0200</lastBuildDate>
+    <pubDate>Tue, 07 Aug 2018 11:43:34 +0800</pubDate>
+    <lastBuildDate>Tue, 07 Aug 2018 11:43:34 +0800</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
+    
+      <item>
+        <title>Host Flask application with uWSGI and Nginx on RHEL</title>
+        <description>&lt;p&gt;Recently I worked on a project for unilever and they would like a web application to host the whole machine learning services. We used Flask to build the application and now I have to deploy the application on their server. Here are the steps I took.&lt;/p&gt;
+
+&lt;h2&gt;1.  Install Python and setup Flask and uwsgi&lt;/h2&gt;
+
+&lt;p&gt;Since Python 3 cannot directly be installed by the package manager &lt;code class=&quot;highlighter-rouge&quot;&gt;yum&lt;/code&gt; on &lt;strong&gt;RHEL&lt;/strong&gt;, we need to do it manually.&lt;/p&gt;
+
+&lt;h3&gt;Step 1—install the dependency packages&lt;/h3&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo yum install gcc-c++ zlib-devel libffi-devel openssl-devel
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3&gt;Step 2—download and install Python&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Download (there may be newer releases on &lt;a href=&quot;http://www.python.org/download/&quot;&gt;Python.org&lt;/a&gt;):&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; wget https://www.python.org/ftp/python/3.7.0/Python-3.7.0.tgz
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Unzip&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; tar xf Python-3.7.0.tgz
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Prepare compilation&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;Python-3.7.0/
+ ./configure
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Build&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; make
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Install&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; sudo make install
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+    &lt;p&gt;OR if you don’t want to overwrite the &lt;code class=&quot;highlighter-rouge&quot;&gt;python&lt;/code&gt; executable (safer, at least on some distros &lt;code class=&quot;highlighter-rouge&quot;&gt;yum&lt;/code&gt; needs &lt;code class=&quot;highlighter-rouge&quot;&gt;python&lt;/code&gt; to be &lt;code class=&quot;highlighter-rouge&quot;&gt;2.x&lt;/code&gt;, such as for &lt;code class=&quot;highlighter-rouge&quot;&gt;RHEL6&lt;/code&gt;) - you can install &lt;code class=&quot;highlighter-rouge&quot;&gt;python3.*&lt;/code&gt; as a concurrent instance to the system default with an altinstall:&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; sudo make altinstall
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+    &lt;p&gt;After installing Python3, we can use &lt;code class=&quot;highlighter-rouge&quot;&gt;pip&lt;/code&gt; to install the packages we need. However, when I tried to use &lt;code class=&quot;highlighter-rouge&quot;&gt;pip&lt;/code&gt;, I encountered the following problem:&lt;/p&gt;
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip is configured with locations that require TLS/SSL, however the ssl module &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;Python is not available.
+Collecting &amp;lt;package&amp;gt;
+  Could not fetch URL https://pypi.python.org/simple/&amp;lt;package&amp;gt;/: There was a problem confirming the ssl certificate: Can&lt;span class=&quot;s1&quot;&gt;'t connect to HTTPS URL because the SSL module is not available. - skipping
+  Could not find a version that satisfies the requirement &amp;lt;package&amp;gt; (from versions: )
+No matching distribution found for &amp;lt;package&amp;gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+    &lt;p&gt;It turned out that I forgot to install the &lt;code class=&quot;highlighter-rouge&quot;&gt;openssl-devel&lt;/code&gt; package at the beginning. So I installed it and ran&lt;/p&gt;
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo checkinstall
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+    &lt;p&gt;in the Python source code directory. Till now, Python3 was successfully installed in the system.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3&gt;Step 3—install the necessary Python packages through &lt;code class=&quot;highlighter-rouge&quot;&gt;pip&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;In the project, we used &lt;code class=&quot;highlighter-rouge&quot;&gt;LightGBM&lt;/code&gt; and some other open source to process the data and build models for it. Apart from the packages, it is important that we have saperate environments for development and production.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Setup virtual environment&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip3 install --user virtualenv
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;PATH-TO-PROJECT
+virtualenv production-env
+&lt;span class=&quot;nb&quot;&gt;source &lt;/span&gt;production-env/bin/activate
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;We call this environment &lt;code class=&quot;highlighter-rouge&quot;&gt;production-env&lt;/code&gt;, after these steps, we have already entered this new virtual environment. It automatically duplicate the Python in the system with empty list of packages, try &lt;code class=&quot;highlighter-rouge&quot;&gt;pip3 freeze&lt;/code&gt; will give us an empty list.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Install packages in the environment&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip install lightgbm
+pip install pandas
+pip install Flask
+pip install xlrd
+pip install xlsxwriter
+pip install uwsgi
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;As I already mentioned, we are to use LightGBM as our ML model, in automatically install &lt;code class=&quot;highlighter-rouge&quot;&gt;numpy&lt;/code&gt; , &lt;code class=&quot;highlighter-rouge&quot;&gt;scipy&lt;/code&gt; as well as &lt;code class=&quot;highlighter-rouge&quot;&gt;scikit_learn&lt;/code&gt; which are its dependencies. We also need &lt;code class=&quot;highlighter-rouge&quot;&gt;pandas&lt;/code&gt; to load and process the dataset. Since our data may be stored in Excel, we also need &lt;code class=&quot;highlighter-rouge&quot;&gt;xlrd&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;xlsxwriter&lt;/code&gt; to read and write Excel files. Finally, as we will use &lt;code class=&quot;highlighter-rouge&quot;&gt;uWSGI&lt;/code&gt; as our Deployment server and &lt;code class=&quot;highlighter-rouge&quot;&gt;Flask&lt;/code&gt; to build the application, we also need these two packges to be installed.&lt;/p&gt;
+
+    &lt;h3&gt;Step 4—Setup Flask and uWSGI&lt;/h3&gt;
+
+    &lt;p&gt;Building Flask application is not in the scope of this post, I will show a toy example here.&lt;/p&gt;
+
+    &lt;h4&gt;Create a Sample App&lt;/h4&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;nano ~/myproject/myproject.py
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;The application code will live in this file. It will import Flask and instantiate a Flask object. You can use this to define the functions that should be run when a specific route is requested:&lt;/p&gt;
+
+    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;flask&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Flask&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;app&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Flask&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;__name__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;nd&quot;&gt;@app.route&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;hello&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&amp;lt;h1 style='color:blue'&amp;gt;Hello There!&amp;lt;/h1&amp;gt;&quot;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__name__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;__main__&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;host&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'0.0.0.0'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;This basically defines what content to present when the root domain is accessed. Save and close the file when you’re finished.&lt;/p&gt;
+
+    &lt;h4&gt;Create the WSGI Entry Point&lt;/h4&gt;
+
+    &lt;p&gt;Next, let’s create a file that will serve as the entry point for our application. This will tell our uWSGI server how to interact with it.&lt;/p&gt;
+
+    &lt;p&gt;Let’s call the file &lt;code class=&quot;highlighter-rouge&quot;&gt;wsgi.py&lt;/code&gt;:&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;nano ~/myproject/wsgi.py
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;In this file, let’s import the Flask instance from our application and then run it:&lt;/p&gt;
+
+    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;myproject&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;app&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__name__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;__main__&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;Save and close the file when you are finished.&lt;/p&gt;
+
+    &lt;h3&gt;Step 5—Configure uWSGI&lt;/h3&gt;
+
+    &lt;p&gt;Your application is now written with an entry point established. We can now move on to configuring uWSGI.&lt;/p&gt;
+
+    &lt;h4&gt;Creating a uWSGI Configuration File&lt;/h4&gt;
+
+    &lt;p&gt;Ultimately we want something robust for long-term usage. We can create a uWSGI configuration file with the relevant options to achieve this.&lt;/p&gt;
+
+    &lt;p&gt;Let’s place that file in our project directory and call it &lt;code class=&quot;highlighter-rouge&quot;&gt;myproject.ini&lt;/code&gt;:&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;nano ~/myproject/myproject.ini
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;Inside, we will start off with the &lt;code class=&quot;highlighter-rouge&quot;&gt;[uwsgi]&lt;/code&gt; header so that uWSGI knows to apply the settings.&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;uwsgi]
+module &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; wsgi:app
+chmod-socket &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 666
+master &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true
+enable&lt;/span&gt;-threads &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true
+&lt;/span&gt;processes &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 16
+callable &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true
+&lt;/span&gt;single-interpreter &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true
+&lt;/span&gt;socket &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; /home/user/tmp/myproject.sock
+vacuum &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true
+&lt;/span&gt;wsgi-file &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; wsgi.py
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+
+    &lt;h3&gt;Step 6—Create a systemd Unit File&lt;/h3&gt;
+
+    &lt;p&gt;Next, let’s create the systemd service unit file. Creating a systemd unit file will allow Ubuntu’s init system to automatically start uWSGI and serve the Flask application whenever the server boots.&lt;/p&gt;
+
+    &lt;p&gt;Create a unit file ending in &lt;code class=&quot;highlighter-rouge&quot;&gt;.service&lt;/code&gt; within the &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/systemd/system&lt;/code&gt; directory to begin:&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo nano /etc/systemd/system/myproject.service
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+    &lt;p&gt;Inside, we’ll start with the [Unit] section, which is used to specify metadata and dependencies. Let’s put a description of our service here and tell the init system to only start this after the networking target has been reached. The &lt;code class=&quot;highlighter-rouge&quot;&gt;[Service]&lt;/code&gt; section will specify the user and group that we want the process to run under. Let’s give our regular user account ownership of the process since it owns all of the relevant files. Let’s also give group ownership to the &lt;code class=&quot;highlighter-rouge&quot;&gt;nginx&lt;/code&gt; group so that Nginx can communicate easily with the uWSGI processes. Remember to replace the username here with your username. Finally, let’s add an &lt;code class=&quot;highlighter-rouge&quot;&gt;[Install]&lt;/code&gt; section. This will tell systemd what to link this service to if we enable it to start at boot. We want this service to start when the regular multi-user system is up and running.&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;Unit]
+&lt;span class=&quot;nv&quot;&gt;Description&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;uWSGI instance to serve myproject
+&lt;span class=&quot;nv&quot;&gt;After&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;network.target
+
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;Service]
+&lt;span class=&quot;nv&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;nginx
+&lt;span class=&quot;nv&quot;&gt;Group&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;user
+&lt;span class=&quot;nv&quot;&gt;ExecStart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; /bin/sh -c &lt;span class=&quot;s1&quot;&gt;'cd /home/user/myproject; source /home/user/myproject/production-env/bin/activate; uwsgi --ini myproject.ini'&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;Install]
+&lt;span class=&quot;nv&quot;&gt;WantedBy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;multi-user.target
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;With that, our systemd service file is complete. Save and close it now.&lt;/p&gt;
+
+    &lt;p&gt;We can now start the uWSGI service we created and enable it so that it starts at boot:&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo systemctl start myproject
+sudo systemctl &lt;span class=&quot;nb&quot;&gt;enable &lt;/span&gt;myproject
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+    &lt;p&gt;Let’s check the status:&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo systemctl status myproject
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;If you see any errors, be sure to resolve them before continuing with the tutorial.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2&gt;2.  Install Nginx&lt;/h2&gt;
+
+&lt;h3&gt;Step 1—Add Nginx Repository&lt;/h3&gt;
+
+&lt;p&gt;To add the CentOS 7 EPEL repository, open terminal and use the following command:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo yum install epel-release
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3&gt;Step 2—Install Nginx&lt;/h3&gt;
+
+&lt;p&gt;Now that the Nginx repository is installed on your server, install Nginx using the following &lt;code class=&quot;highlighter-rouge&quot;&gt;yum&lt;/code&gt; command:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo yum install nginx
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;After you answer yes to the prompt, Nginx will finish installing on your server.&lt;/p&gt;
+
+&lt;h3&gt;Step 3—Start Nginx&lt;/h3&gt;
+
+&lt;p&gt;Nginx does not start on its own. To get Nginx running, type:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo systemctl start nginx
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Before continuing, you will probably want to enable Nginx to start when your system boots. To do so, enter the following command:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo systemctl &lt;span class=&quot;nb&quot;&gt;enable &lt;/span&gt;nginx
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h3&gt;Step 3—Configure Nginx to Proxy Requests&lt;/h3&gt;
+
+&lt;p&gt;Our uWSGI application server should now be up and running, waiting for requests on the socket file in the project directory. We need to configure Nginx to pass web requests to that socket using the &lt;code class=&quot;highlighter-rouge&quot;&gt;uwsgi&lt;/code&gt; protocol.&lt;/p&gt;
+
+&lt;p&gt;Begin by opening up Nginx’s default configuration file:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo nano /etc/nginx/nginx.conf
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Open up a server block just above the other &lt;code class=&quot;highlighter-rouge&quot;&gt;server {}&lt;/code&gt; block that is already in the file:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;http &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    . . .
+
+    include /etc/nginx/conf.d/&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.conf;
+
+    server &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    server &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        listen 80 default_server;
+
+        . . .
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We will put all of the configuration for our Flask application inside of this new block. We will start by specifying that this block should listen on the default port 80 and that it should respond to our server’s domain name or IP address:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;user nginx;
+http &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    . . .
+
+	fastcgi_read_timeout 999999;
+    server &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        listen 80;
+        server_name server_domain_or_IP;
+
+        location / &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            include uwsgi_params;
+            uwsgi_pass unix:/home/user/myproject/myproject.sock;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;That’s basically all we need to serve our application. Note that we would like to use Flask to serve our model training processes, it is very likely that a request would take a long time to be processed (i.e. to train a model). So don’t forget to add &lt;code class=&quot;highlighter-rouge&quot;&gt;fastcgi_read_timeout 999999;&lt;/code&gt; to the &lt;code class=&quot;highlighter-rouge&quot;&gt;http&lt;/code&gt; block of the &lt;code class=&quot;highlighter-rouge&quot;&gt;nginx&lt;/code&gt; configuration file. Save and close the file when you’re finished.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;nginx&lt;/code&gt; user must have access to our application directory in order to access the socket file there. By default, CentOS locks down each user’s home directory very restrictively, so we will add the &lt;code class=&quot;highlighter-rouge&quot;&gt;nginx&lt;/code&gt; user to our user’s group so that we can then open up the minimum permissions necessary to grant access.&lt;/p&gt;
+
+&lt;p&gt;You can add the &lt;code class=&quot;highlighter-rouge&quot;&gt;nginx&lt;/code&gt; user to your user group with the following command. Substitute your own username for the &lt;code class=&quot;highlighter-rouge&quot;&gt;user&lt;/code&gt; in the command:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo usermod -a -G user nginx
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now, we can give our user group execute permissions on our home directory. This will allow the Nginx process to enter and access content within:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;chmod 710 /home/user
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;With the permissions set up, we can test our Nginx configuration file for syntax errors:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-Bash&quot;&gt;sudo nginx -t
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If this returns without indicating any issues, we can start and enable the Nginx process so that it starts automatically at boot:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo systemctl start nginx
+sudo systemctl &lt;span class=&quot;nb&quot;&gt;enable &lt;/span&gt;nginx
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;You should now be able to go to your server’s domain name or IP address in your web browser and see your application.&lt;/p&gt;
+
+&lt;h2&gt;3. Troubleshoot&lt;/h2&gt;
+
+&lt;h3&gt;Permission denied problem&lt;/h3&gt;
+
+&lt;p&gt;I encountered the permission denied problem during setup this environment:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;13: Permission denied&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;while &lt;/span&gt;connecting to upstream:[nginx]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Running the following commands fixed my issue:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo cat /var/log/audit/audit.log | grep nginx | grep denied | audit2allow -M mynginx
+sudo semodule -i mynginx.pp
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;In case &lt;code class=&quot;highlighter-rouge&quot;&gt;audit2allow&lt;/code&gt; is not availible in the system, run &lt;code class=&quot;highlighter-rouge&quot;&gt;yum install policycoreutils-python&lt;/code&gt; to get &lt;code class=&quot;highlighter-rouge&quot;&gt;audit2allow&lt;/code&gt; first.&lt;/p&gt;
+
+&lt;h3&gt;No such file or directory problem&lt;/h3&gt;
+
+&lt;p&gt;I initially followed the tutorial from &lt;a href=&quot;http://flask.pocoo.org/docs/1.0/deploying/uwsgi/&quot;&gt;Flask documentation&lt;/a&gt;, however I ended up with this issue:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;2: No such file or directory&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The solution I found was just to link the .sock in the user’s directory rather than in a system folder. Inside the &lt;code class=&quot;highlighter-rouge&quot;&gt;myproject.ini&lt;/code&gt; file:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;socket &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; /home/user/tmp/myproject.sock
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2&gt;Credits&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-uwsgi-and-nginx-on-centos-7&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;https://serverfault.com/questions/777749/how-to-disable-timeout-for-nginx&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;https://stackoverflow.com/questions/41328451/ssl-module-in-python-is-not-available-when-installing-package-with-pip3&lt;/p&gt;
+&lt;/blockquote&gt;
+
+</description>
+        <pubDate>Fri, 03 Aug 2018 10:31:00 +0800</pubDate>
+        <link>http://localhost:4000/blog/2018/deployment-documentation/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2018/deployment-documentation/</guid>
+        
+        <category>Machine Learning</category>
+        
+        <category>Linux</category>
+        
+        <category>Python</category>
+        
+        
+      </item>
     
       <item>
         <title>LDA derivation</title>
@@ -105,7 +499,7 @@ p(w,z)=\int p(\theta)\bigg(\prod_{n=1}^{N}p(z_{n}|\theta)p(w_{n}|z_{n})\bigg)d\t
 
 &lt;p&gt;where &lt;script type=&quot;math/tex&quot;&gt;\int z_{ni}dz=\sum_{n=1}^{N}\phi_{ni}&lt;/script&gt;.&lt;/p&gt;
 </description>
-        <pubDate>Fri, 12 May 2017 12:58:07 +0200</pubDate>
+        <pubDate>Fri, 12 May 2017 18:58:07 +0800</pubDate>
         <link>http://localhost:4000/blog/2017/LDA-derivation/</link>
         <guid isPermaLink="true">http://localhost:4000/blog/2017/LDA-derivation/</guid>
         
@@ -457,7 +851,7 @@ CODE		ENDS
 
 &lt;p&gt;Note that this figure was from &lt;em&gt;“Patterson, David A., and John L. Hennessy. Computer organization and design: the hardware/software interface.&lt;/em&gt; 3rd edition”.&lt;/p&gt;
 </description>
-        <pubDate>Thu, 11 May 2017 19:30:58 +0200</pubDate>
+        <pubDate>Fri, 12 May 2017 01:30:58 +0800</pubDate>
         <link>http://localhost:4000/blog/2017/64bit-division-on-x86/</link>
         <guid isPermaLink="true">http://localhost:4000/blog/2017/64bit-division-on-x86/</guid>
         
@@ -516,7 +910,7 @@ continue. Make sure that &lt;code class=&quot;highlighter-rouge&quot;&gt;gem ins
 &lt;/blockquote&gt;
 
 </description>
-        <pubDate>Sun, 07 May 2017 20:43:31 +0200</pubDate>
+        <pubDate>Mon, 08 May 2017 02:43:31 +0800</pubDate>
         <link>http://localhost:4000/blog/2017/blog-setup/</link>
         <guid isPermaLink="true">http://localhost:4000/blog/2017/blog-setup/</guid>
         
@@ -536,7 +930,7 @@ continue. Make sure that &lt;code class=&quot;highlighter-rouge&quot;&gt;gem ins
 &lt;p&gt;The system I’m now using is &lt;a href=&quot;https://www.linuxmint.com/&quot;&gt;Linux Mint 18&lt;/a&gt;, which has an interface much more better than Ubuntu.&lt;/p&gt;
 
 </description>
-        <pubDate>Sun, 07 May 2017 19:05:24 +0200</pubDate>
+        <pubDate>Mon, 08 May 2017 01:05:24 +0800</pubDate>
         <link>http://localhost:4000/blog/2017/first-post/</link>
         <guid isPermaLink="true">http://localhost:4000/blog/2017/first-post/</guid>
         
