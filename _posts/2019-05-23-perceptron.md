@@ -43,7 +43,7 @@ $$
 \end{equation}
 $$
 
-where $$M$$ is the set of misclassified instances. The learning procedure is driven by misclassification, more specifically, by using stochastic gradient decent. Firstly, choose a hyperplane $$w_0, b_0$$, then minimize the objective function $\eqref{loss}$ by using gradient decent.
+where $$M$$ is the set of misclassified instances. The learning procedure is driven by misclassification, more specifically, by using stochastic gradient decent. Firstly, choose a hyperplane $$w_0, b_0$$, then minimize the objective function \eqref{loss}​ by using gradient decent.
 
 Suppose the misclassification set $$M$$ is stationary, the gradient of loss function $$L(w, b)$$ is then given by
 
