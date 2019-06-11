@@ -5,9 +5,136 @@
     <description>Mingpeiyu Zhang's personal website.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 07 Aug 2018 15:52:35 +0800</pubDate>
-    <lastBuildDate>Tue, 07 Aug 2018 15:52:35 +0800</lastBuildDate>
+    <pubDate>Tue, 11 Jun 2019 14:16:36 +0800</pubDate>
+    <lastBuildDate>Tue, 11 Jun 2019 14:16:36 +0800</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
+    
+      <item>
+        <title>K nearest neighbors</title>
+        <description>&lt;script type=&quot;text/x-mathjax-config&quot;&gt;
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: &quot;AMS&quot; } }
+});
+&lt;/script&gt;
+
+&lt;h2&gt;K nearest neighbors&lt;/h2&gt;
+
+&lt;p&gt;Given a training dataset and a new instance, find the new instance’s k closest instances in training set, then classify the new instance the class that majority of the k instances belong to.&lt;/p&gt;
+
+&lt;p&gt;More generally, given training set
+&lt;script type=&quot;math/tex&quot;&gt;\begin{equation}
+	T = \{ (x_1, y_1), (x_2, y_2), \cdots, (x_N, y_N)\}
+\end{equation}&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;where &lt;script type=&quot;math/tex&quot;&gt;x_i \in \mathcal{X}\subseteq\mathbf{R}^n&lt;/script&gt; is the feature vector of an instance, &lt;script type=&quot;math/tex&quot;&gt;y_i\in\mathcal{Y}=\{c_1,c_2,\cdots,c_K\}&lt;/script&gt; is the class of an instance, &lt;script type=&quot;math/tex&quot;&gt;i=1,2,\cdots,N&lt;/script&gt;. Input a new instance’s feature vector &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt;, output &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt;’s class &lt;script type=&quot;math/tex&quot;&gt;y&lt;/script&gt;.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Based on given distance measure, find &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt;’s k nearest points in &lt;script type=&quot;math/tex&quot;&gt;T&lt;/script&gt;, the region that covers these k points is denoted as &lt;script type=&quot;math/tex&quot;&gt;N_k(x)&lt;/script&gt;.&lt;/li&gt;
+  &lt;li&gt;Decide &lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt;’s class &lt;script type=&quot;math/tex&quot;&gt;y&lt;/script&gt; based on certain classification rule (such as majority vote) in &lt;script type=&quot;math/tex&quot;&gt;N_k(x)&lt;/script&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;This whole procedure can be abstracted as
+&lt;script type=&quot;math/tex&quot;&gt;\begin{equation}
+	y = \arg\max_{c_j}\sum_{x_i\in N_k(x)} I(y_i==c_i), i=1,2,\cdots,N;j=1,2,\cdots,K
+\end{equation}&lt;/script&gt;&lt;/p&gt;
+
+&lt;h2&gt;Distance measurement metrics&lt;/h2&gt;
+
+&lt;p&gt;Suppose the feature space &lt;script type=&quot;math/tex&quot;&gt;\mathcal{X}&lt;/script&gt; is n dimensional real number space &lt;script type=&quot;math/tex&quot;&gt;\mathbf{R}^n&lt;/script&gt;. For two vectors &lt;script type=&quot;math/tex&quot;&gt;x_i, x_j\in \mathcal{X}&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;x_i=(x_i^{(1)},x_i^{(2)},\cdots,x_i^{(n)})^T&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;x_j=(x_j^{(1)},x_j^{(2)},\cdots,x_j^{(n)})^T&lt;/script&gt;. The &lt;script type=&quot;math/tex&quot;&gt;L_p&lt;/script&gt; distance between &lt;script type=&quot;math/tex&quot;&gt;x_i&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;x_j&lt;/script&gt; is defined as&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{equation}
+	L_p(x_i, x_j) = \Big(\sum_{l=1}^n |x_i^{(l)} - x_j^{(l)}|^p\Big)^{\frac{1}{p}}
+\end{equation}&lt;/script&gt;
+
+&lt;p&gt;where &lt;script type=&quot;math/tex&quot;&gt;p\geq 1&lt;/script&gt;. When &lt;script type=&quot;math/tex&quot;&gt;p=2&lt;/script&gt;, the distance is called Euclidean distance, defined as&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{equation}
+	L_2(x_i, x_j) = \Big(\sum_{l=1}^{n}|x_i^{(l)}-x_j^{(l)}|\Big)^{\frac{1}{2}}
+\end{equation}&lt;/script&gt;
+
+&lt;p&gt;When &lt;script type=&quot;math/tex&quot;&gt;p=1&lt;/script&gt;, the distance is called Euclidean distance, defined as&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{equation}
+	L_1(x_i, x_j) = \sum_{l=1}^{n}|x_i^{(l)}-x_j^{(l)}|
+\end{equation}&lt;/script&gt;
+
+&lt;p&gt;When &lt;script type=&quot;math/tex&quot;&gt;p=\infty&lt;/script&gt;, it is the maximum distance between each coordinates, defined as&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{equation}
+	L_\infty(x_i, x_j) = \max_{l}|x_i^{(l)}-x_j^{(l)}|
+\end{equation}&lt;/script&gt;
+
+</description>
+        <pubDate>Thu, 23 May 2019 17:02:24 +0800</pubDate>
+        <link>http://localhost:4000/blog/2019/knn/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2019/knn/</guid>
+        
+        <category>Machine Learning</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Perceptron</title>
+        <description>&lt;script type=&quot;text/x-mathjax-config&quot;&gt;
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: &quot;AMS&quot; } }
+});
+&lt;/script&gt;
+
+&lt;h2&gt;Perceptron basics&lt;/h2&gt;
+
+&lt;p&gt;Suppose the input space (feature space) is &lt;script type=&quot;math/tex&quot;&gt;\mathcal{X}\subseteq \textbf{R}^n&lt;/script&gt;, output space is &lt;script type=&quot;math/tex&quot;&gt;\mathcal{Y}=\{+1,-1\}&lt;/script&gt;. Then the following function from input space to output space is called perceptron.&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{equation}
+	f(x) = \text{sign} (w \cdot x + b)
+\end{equation}&lt;/script&gt;
+
+&lt;p&gt;Where &lt;script type=&quot;math/tex&quot;&gt;w&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;b&lt;/script&gt; are the parameters of perceptron, &lt;script type=&quot;math/tex&quot;&gt;w\in \textbf{R}^n&lt;/script&gt; is weight vector, &lt;script type=&quot;math/tex&quot;&gt;b\in \textbf{R}&lt;/script&gt; is bias.&lt;/p&gt;
+
+&lt;h2&gt;Learning method of perceptron&lt;/h2&gt;
+
+&lt;p&gt;Given a dataset&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{equation}
+	T = \{(x_1, y_1), (x_2, y_2), \cdots, (x_N, y_N)\}
+\end{equation}&lt;/script&gt;
+
+&lt;p&gt;\noindent where &lt;script type=&quot;math/tex&quot;&gt;x_i \in \mathcal{X} = \textbf{R}^n&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;y_i \in \mathcal{Y} =\{-1, 1\}&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;i=1,2,\cdots,N&lt;/script&gt;, find parameters &lt;script type=&quot;math/tex&quot;&gt;w, b&lt;/script&gt; such that the loss function below is minimum&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{equation}
+	\min_{w, b}L(w, b) = - \sum_{x_i\in M}y_i(w\cdot x_i + b)\label{loss}
+\end{equation}&lt;/script&gt;
+
+&lt;p&gt;where &lt;script type=&quot;math/tex&quot;&gt;M&lt;/script&gt; is the set of misclassified instances. The learning procedure is driven by misclassification, more specifically, by using stochastic gradient decent. Firstly, choose a hyperplane &lt;script type=&quot;math/tex&quot;&gt;w_0, b_0&lt;/script&gt;, then minimize the objective function \eqref{loss}​ by using gradient decent.&lt;/p&gt;
+
+&lt;p&gt;Suppose the misclassification set &lt;script type=&quot;math/tex&quot;&gt;M&lt;/script&gt; is stationary, the gradient of loss function &lt;script type=&quot;math/tex&quot;&gt;L(w, b)&lt;/script&gt; is then given by&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{align*}
+	\nabla_w L(w, b) &amp;= - \sum_{x_i \in M} y_i x_i \notag \\
+	\nabla_b L(w, b) &amp;= - \sum_{x_i \in M} y_i \notag
+\end{align*} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;Select a misclassified instance &lt;script type=&quot;math/tex&quot;&gt;(x_i, y_i)&lt;/script&gt; randomly, then update &lt;script type=&quot;math/tex&quot;&gt;w&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;b&lt;/script&gt;&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{align}
+	w &amp; \gets w + \eta y_i x_i \\
+	b &amp; \gets b + \eta y_i
+\end{align} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;where &lt;script type=&quot;math/tex&quot;&gt;% &lt;![CDATA[
+\eta(0&lt;\eta\leq 1) %]]&gt;&lt;/script&gt; is the step size or learning rate. By doing so, we can expect the loss function &lt;script type=&quot;math/tex&quot;&gt;L(w, b)&lt;/script&gt; decreases continuously, until 0.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 23 May 2019 17:02:24 +0800</pubDate>
+        <link>http://localhost:4000/blog/2019/perceptron/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2019/perceptron/</guid>
+        
+        <category>Machine Learning</category>
+        
+        
+      </item>
     
       <item>
         <title>Host Flask application with uWSGI and Nginx on RHEL</title>

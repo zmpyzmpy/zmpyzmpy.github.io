@@ -2,7 +2,8 @@
 layout: post
 title:  "Perceptron"
 date: 2019-05-23 17:02:24 +0800
-tags: Machine Learning
+tags: 
+- Machine Learning
 ---
 
 <script type="text/x-mathjax-config">
