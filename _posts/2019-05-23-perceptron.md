@@ -5,48 +5,62 @@ date: 2019-05-23 17:02:24 +0800
 tags: Machine Learning
 ---
 
-\section{Perceptron basics}
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
 
-\noindent Suppose the input space (feature space) is $\mathcal{X}\subseteq \textbf{R}^n$, output space is $\mathcal{Y}=\{+1,-1\}$. Then the following function from input space to output space is called perceptron.
+## Perceptron basics
 
+Suppose the input space (feature space) is $$\mathcal{X}\subseteq \textbf{R}^n$$, output space is $$\mathcal{Y}=\{+1,-1\}$$. Then the following function from input space to output space is called perceptron.
+
+$$
 \begin{equation}
-​	f(x) = \text{sign} (w \cdot x + b)
+	f(x) = \text{sign} (w \cdot x + b)
 \end{equation}
+$$
 
-\noindent Where $w$ and $b$ are the parameters of perceptron, $w\in \textbf{R}^n$ is weight vector, $b\in \textbf{R}$ is bias. 
+ Where $$w$$ and $$b$$ are the parameters of perceptron, $$w\in \textbf{R}^n$$ is weight vector, $$b\in \textbf{R}$$ is bias. 
 
 
 
-\section{Learning method of perceptron}
+## Learning method of perceptron
 
-\noindent Given a dataset 
+Given a dataset 
 
+$$
 \begin{equation}
-​	T = \{(x_1, y_1), (x_2, y_2), \cdots, (x_N, y_N)\}
+	T = \{(x_1, y_1), (x_2, y_2), \cdots, (x_N, y_N)\}
 \end{equation}
+$$
 
-\noindent where $x_i \in \mathcal{X} = \textbf{R}^n$, $y_i \in \mathcal{Y} =\{-1, 1\}$, $i=1,2,\cdots,N$, find parameters $w, b$ such that the loss function below is minimum
+\noindent where $$x_i \in \mathcal{X} = \textbf{R}^n$$, $$y_i \in \mathcal{Y} =\{-1, 1\}$$, $$i=1,2,\cdots,N$$, find parameters $$w, b$$ such that the loss function below is minimum
 
+$$
 \begin{equation}
-​	\min_{w, b}L(w, b) = - \sum_{x_i\in M}y_i(w\cdot x_i + b) \label{loss_func}
+	\min_{w, b}L(w, b) = - \sum_{x_i\in M}y_i(w\cdot x_i + b)\label{loss}
 \end{equation}
+$$
 
-\noindent where $M$ is the set of misclassified instances. The learning procedure is driven by misclassification, more specifically, by using stochastic gradient decent. Firstly, choose a hyperplane $w_0, b_0$, then minimize the objective function \ref{loss_func} by using gradient decent.\\
+where $$M$$ is the set of misclassified instances. The learning procedure is driven by misclassification, more specifically, by using stochastic gradient decent. Firstly, choose a hyperplane $$w_0, b_0$$, then minimize the objective function $\eqref{loss}$ by using gradient decent.
 
-\noindent Suppose the misclassification set $M$ is stationary, the gradient of loss function $L(w, b)$ is then given by
+Suppose the misclassification set $$M$$ is stationary, the gradient of loss function $$L(w, b)$$ is then given by
 
+$$
 \begin{align*}
-​	\nabla_w L(w, b) &= - \sum_{x_i \in M} y_i x_i \notag \\
-​	\nabla_b L(w, b) &= - \sum_{x_i \in M} y_i \notag
+	\nabla_w L(w, b) &= - \sum_{x_i \in M} y_i x_i \notag \\
+	\nabla_b L(w, b) &= - \sum_{x_i \in M} y_i \notag
 \end{align*}
+$$
 
-\noindent Select a misclassified instance $(x_i, y_i)$ randomly, then update $w$ and $b$
+Select a misclassified instance $$(x_i, y_i)$$ randomly, then update $$w$$ and $$b$$
 
+$$
 \begin{align}
-​	w & \gets w + \eta y_i x_i \\
-​	b & \gets b + \eta y_i
+	w & \gets w + \eta y_i x_i \\
+	b & \gets b + \eta y_i
 \end{align}
+$$
 
-\noindent where $\eta(0<\eta\leq 1)$ is the step size or learning rate. By doing so, we can expect the loss function $L(w, b)$ decreases continuously, until 0.
-
-
+where $$\eta(0<\eta\leq 1)$$ is the step size or learning rate. By doing so, we can expect the loss function $$L(w, b)$$ decreases continuously, until 0.
