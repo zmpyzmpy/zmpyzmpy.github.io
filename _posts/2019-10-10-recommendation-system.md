@@ -7,5 +7,5 @@ tags:
 - Xmind
 ---
 
-![Division algorithm]({{site.url}}/images/posts/rs.svg)
+![Division algorithm]({{site.url}}/images/posts/rs.png)
 
