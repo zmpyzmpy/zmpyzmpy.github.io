@@ -5,7 +5,6 @@ date: 2019-11-26 16:32:02 +0800
 tags: 
 - Python
 ---
-# Multiprocessing in Python
 
 ## Problem with multiprocessing
 
