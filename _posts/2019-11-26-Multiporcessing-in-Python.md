@@ -76,7 +76,9 @@ Same code as prevous one, but no error this time.
 >
 > 4. Efficiently handling [large objects and numerical data](https://ray-project.github.io/2017/10/15/fast-python-serialization-with-ray-and-arrow.html).
 >
->    [more](https://towardsdatascience.com/modern-parallel-and-distributed-python-a-quick-tutorial-on-ray-99f8d70369b8)
+>
+>
+>    [more here](https://towardsdatascience.com/modern-parallel-and-distributed-python-a-quick-tutorial-on-ray-99f8d70369b8)
 
 ### 2.3 Joblib
 
@@ -453,3 +455,13 @@ for _ in range(10):
 | Multiprocessing | ❌               | ❌            | ❌                |
 | Pathos          | ✔️               | ❌            | ❌                |
 | Joblib          | ✔️               | ❌            | ✔️                |
+
+## 5. References
+
+> https://towardsdatascience.com/modern-parallel-and-distributed-python-a-quick-tutorial-on-ray-99f8d70369b8
+>
+> https://towardsdatascience.com/10x-faster-parallel-python-without-python-multiprocessing-e5017c93cce1
+>
+> https://yuanjiang.space/pathos-solves-PicklingError-for-multiprocessing
+>
+> https://github.com/apache/arrow/issues/2511
