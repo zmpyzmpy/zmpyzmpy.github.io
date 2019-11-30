@@ -4,12 +4,10 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+I'm <strong itemprop="name">{{ site.author.name }}</strong>, an <em itemprop="jobTitle">{{ site.author.job }}, {{ site.author.new_job }}</em>
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+{{ site.author.bio }}
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
-
-
+My resume in [English](/resume/MingpeiyuZhang_DataScientist_en.pdf) and in [Chinese](/resume/MingpeiyuZhang_DataScientist_cn.pdf).
 
 The website icon ![icon](/images/icon.jpg){:height="20px"} was <a href='http://www.freepik.com/free-vector/infinity-icon_1111852.htm'>designed by Freepik</a>.

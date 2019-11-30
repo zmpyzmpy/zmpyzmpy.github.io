@@ -8,7 +8,8 @@ baseurl: ""
 # Author settings
 author:
   name      : Minegpeiyu Zhang
-  job       : Algorithm Engineer @ <a href="https://www.guandata.com/">Guan Data</a>
+  job       : Machine Learning Engineer @ <a href="https://www.guandata.com/">Guan Data</a>
+  new_job   : incoming Data Scientist @ <a href="https://www.microsoft.com/">Microsoft</a>
   bio       : "Grounded solidly in the basics of computer science, data science and mathematics with rich experiences both theoretical and practical."
   # thumb     : /images/face.jpg
   email     : zmpyzmpy@gmail.com
