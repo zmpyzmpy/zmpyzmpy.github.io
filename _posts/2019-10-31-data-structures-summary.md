@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Data structure problems summary (刷题记录整理)"
+title: "Data structure problems summary"
 date: 2019-10-31 15:22:16 +0800
 tags: 
 - Data structures
