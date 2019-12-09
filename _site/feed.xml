@@ -5,9 +5,762 @@
     <description>Mingpeiyu Zhang's personal website.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 11 Jun 2019 14:16:36 +0800</pubDate>
-    <lastBuildDate>Tue, 11 Jun 2019 14:16:36 +0800</lastBuildDate>
+    <pubDate>Mon, 09 Dec 2019 13:36:06 +0800</pubDate>
+    <lastBuildDate>Mon, 09 Dec 2019 13:36:06 +0800</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
+    
+      <item>
+        <title>Interview</title>
+        <description>&lt;h2&gt;面试流程&lt;/h2&gt;
+
+&lt;p&gt;下面是我这次微软面试之旅的整个流程。从第一次沟通到最终收到正式offer，整个时间跨了5个月…不过等待是值得的，最终收获到了心仪的offer。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;6.18 第一次LinkedIn联系，后面告知不太匹配&lt;/p&gt;
+
+  &lt;p&gt;9.19 第二次LinkedIn联系&lt;/p&gt;
+
+  &lt;p&gt;9.23 流程开始&lt;/p&gt;
+
+  &lt;p&gt;10.10 电话面试&lt;/p&gt;
+
+  &lt;p&gt;10.23 告知电面通过，约on site面试&lt;/p&gt;
+
+  &lt;p&gt;10.28 on site四轮面试&lt;/p&gt;
+
+  &lt;p&gt;11.11 口头offer&lt;/p&gt;
+
+  &lt;p&gt;11.21 正式offer&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;LinkedIn邀约&lt;/h2&gt;
+
+&lt;p&gt;我的LinkedIn的主页一直都有在更新和维护的，中英文都有，并且上面附了详细的联系方式包括email和微信号。第一次的时候应该是微软的hr小姐姐搜到了我的主页，直接在上面找到了我的微信号加到了我。当时做了简单沟通之后推了一个MSRA的岗位给我，并且要求提供英文简历。那段时间一直在看国内大厂的机会，所以英文简历有段时间没更新了，晚上花了几个小时整理了一下，第二天就发过去了。之后经过了漫长的等待…一个月之后我的一个学姐从荷兰回来入职了苏州微软，说可以内推。这时我才想起来之前有投过一个岗位，问了下情况时候hr小姐姐表示简历投过去了，可能不太匹配就没有安排后续的面试了。&lt;/p&gt;
+
+&lt;p&gt;这段时间面试屡屡受挫，由于也到了年中了，决定先静下心来好好沉淀一下自己的基础知识，所以开始从头复习了一遍，从这时开始下决心要好好刷一下LeetCode上的算法题了。&lt;/p&gt;
+
+&lt;p&gt;两个月之后的九月份，另外一个hr小姐姐在LinkedIn上联系了我，说看到之前她们同事联系过，现在有新的hc了问我还考不考虑。我当然是考虑啦，英文简历发过去，过了两天小姐姐打电话过来聊了聊我目前的工作方向以及想从事的内容。我个人还是想做算法方向，并且希望是和nlp相关的。小姐姐说他们那边Cortana有一个岗位比较符合我的诉求，和我很匹配。我当时就答应了，大概聊了下面试的流程是怎么样的。说是会有一轮电话面试，通过了的话会安排4-5轮的on site面试。电话挂断之后小姐姐邮件发来了JD，看了之后就觉得很想去。问了下面试流程什么时候开始，小姐姐说那边团队最近在出差，后面紧接着就是国庆节了，所以要等国庆假期之后才会有人打电话过来。&lt;/p&gt;
+
+&lt;p&gt;接下来就是两三周的准备了。之前经历过的面试一般都是会问项目，然后问具体的业务细节，当时我以为微软也是一样的…因为Cortana是一个只能对话助手，所以我花了一些时间阅读和总结了微软去年发表的一篇对话系统的综述。当然这段时间也陆陆续续地在刷题。&lt;/p&gt;
+
+&lt;h2&gt;电话面试&lt;/h2&gt;
+
+&lt;p&gt;10月10日那天中午，一个北京的电话打了过来说那边是微软要进行一个电话面试。！！终于等到了，面试官可能是个做前端的小哥，内容主要是先自我介绍，然后问了一个很开放性的问题：“你觉得你遇到的最大的挑战是什么，以及如何解决的？”当时有点懵了，感觉和之前经历过的面试都不太一样，一般都是会问一下简历上的项目以及技术细节。外企看中的点应该还是很不一样。后来感觉当时答的不太好，把目前手头上的项目任务按STAR描述了一遍，整个说了大概8、9分钟的样子。聊完这个问题大概已经过了二十分钟。之后他说“项目我大概了解了，下面我们聊几个代码题目吧”！！之前从来没在电面里面被问过代码，虽然有点懵但还是不慌的，毕竟已经刷了几个月的LeetCode了。
+题目难度中等，下面是三个问题：&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;整数开平方&lt;/li&gt;
+  &lt;li&gt;两个数组是由相同的数字组成的，怎么把第二个数组变成第一个数组的顺序&lt;/li&gt;
+  &lt;li&gt;最长公共子序列&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;前两个问题相对比较简单，我回答的还算可以。第三题是一个动态规划的问题，相关的题目还没刷到…当时有点没太想好，后面还好在面试官的提示下回答了上了。最后面试官让我把题目代码写出来发到他的邮箱。回来之后赶紧把代码认认真真写好调试好，以最快的速度发了过去~&lt;/p&gt;
+
+&lt;p&gt;电面后又等待了差不多半个月，一天晚上突然收到了on site面试的邀请~电面之后好好反思总结了一下以及看了一些面经，发觉微软的面试和国内bat大厂的面试还是很不一样的，比较注重考查代码能力，基本都是需要白板写代码的。所以这半个月我基本都是刷LeetCode度过的，期间买了一个拉勾上面的一个数据结构算法面试的课，好好按照上面的分类系统性地复习了一下基础知识以及分门别类地开始刷题。&lt;/p&gt;
+
+&lt;p&gt;on site约的是10.28的北京on site面试。当时还比较困惑为什么苏州的岗位约到了北京的面试。不过没关系，反正一切行程的费用微软都是全额报销的，就快快订了机票和酒店，准备行程出发啦。&lt;/p&gt;
+
+&lt;h2&gt;on site&lt;/h2&gt;
+&lt;html&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://www.w3schools.com/w3css/4/w3.css&quot; /&gt;
+&lt;body&gt;
+
+&lt;div class=&quot;w3-container&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;w3-content w3-display-container&quot;&gt;
+
+&lt;div class=&quot;w3-display-container train-slides&quot;&gt;
+  &lt;img src=&quot;http://localhost:4000/images/posts/ms/IMG_3314.jpg&quot; style=&quot;width:100%&quot; /&gt;
+  &lt;div class=&quot;w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black&quot;&gt;
+    杭州东站，出发~
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;w3-display-container train-slides&quot;&gt;
+  &lt;img src=&quot;http://localhost:4000/images/posts/ms/IMG_3315.jpg&quot; style=&quot;width:100%&quot; /&gt;
+  &lt;div class=&quot;w3-display-bottomright w3-large w3-container w3-padding-16 w3-black&quot;&gt;
+    本来可以去vip候车区，结果太早了没开门…
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;w3-display-container train-slides&quot;&gt;
+  &lt;img src=&quot;http://localhost:4000/images/posts/ms/IMG_3316.jpg&quot; style=&quot;width:100%&quot; /&gt;
+  &lt;div class=&quot;w3-display-bottomright w3-large w3-container w3-padding-16 w3-black&quot;&gt;
+    候车出发~
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;w3-display-container train-slides&quot;&gt;
+  &lt;img src=&quot;http://localhost:4000/images/posts/ms/IMG_3318.jpg&quot; style=&quot;width:100%&quot; /&gt;
+  &lt;div class=&quot;w3-display-topleft w3-large w3-container w3-padding-16 w3-black&quot;&gt;
+    复兴号高铁还是很快的
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;button class=&quot;w3-button w3-display-left w3-black&quot; onclick=&quot;plusDivs(-1)&quot;&gt;&amp;#10094;&lt;/button&gt;
+&lt;button class=&quot;w3-button w3-display-right w3-black&quot; onclick=&quot;plusDivs(1)&quot;&gt;&amp;#10095;&lt;/button&gt;
+
+&lt;/div&gt;
+
+&lt;script&gt;
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName(&quot;train-slides&quot;);
+  if (n &gt; x.length) {slideIndex = 1}
+  if (n &lt; 1) {slideIndex = x.length}
+  for (i = 0; i &lt; x.length; i++) {
+​     x[i].style.display = &quot;none&quot;;  
+  }
+  x[slideIndex-1].style.display = &quot;block&quot;;  
+}
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+</description>
+        <pubDate>Mon, 09 Dec 2019 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/blog/2019/interview/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2019/interview/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Multiprocessing in Python</title>
+        <description>&lt;h2&gt;1. Problem with multiprocessing&lt;/h2&gt;
+
+&lt;p&gt;Pool needs to pickle (serialize) everything it sends to its worker-processes. Pickling actually only saves the name of a function and unpickling requires re-importing the function by name. For that to work, the function needs to be defined at the top-level, nested functions won’t be importable by the child and already trying to pickle them raises an exception.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;multiprocessing&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;OtherClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sentence&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;SomeClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;__init__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sentences&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Some string&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;graphs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;string&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;some_method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;single&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;other&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;OtherClass&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;sentences&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;other&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sentence&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sentence&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sentences&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pool&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;single&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;zip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sentences&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;graphs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;pool&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;multiprocessing&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Pool&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;multiprocessing&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cpu_count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;SomeClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;some_method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The above code would result in the following error:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;AttributeError: Can&lt;span class=&quot;s1&quot;&gt;'t pickle local object '&lt;/span&gt;SomeClass.some_method.&amp;lt;locals&amp;gt;.single&lt;span class=&quot;s1&quot;&gt;'
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2&gt;2. Alternatives&lt;/h2&gt;
+
+&lt;h3&gt;2.1 Pathos&lt;/h3&gt;
+
+&lt;p&gt;To solve this problem, one alternative we can use is &lt;a href=&quot;https://github.com/uqfoundation/multiprocess&quot;&gt;multiprocess&lt;/a&gt; from &lt;a href=&quot;https://github.com/uqfoundation/pathos&quot;&gt;Pathos&lt;/a&gt;. It is a multiprocessing implementation that uses &lt;a href=&quot;https://github.com/uqfoundation/dill&quot;&gt;dill&lt;/a&gt; on the backend which supports serializing and deserializing for almost all types.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pathos&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;OtherClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sentence&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;SomeClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;__init__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sentences&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Some string&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;graphs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;string&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;some_method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;single&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;other&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;OtherClass&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;sentences&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;other&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sentence&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sentence&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sentences&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pool&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;single&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;zip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sentences&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;graphs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;pool&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pathos&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;multiprocessing&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Pool&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;multiprocessing&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cpu_count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;SomeClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;some_method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Same code as prevous one, but no error this time.&lt;/p&gt;
+
+&lt;h3&gt;2.2 Ray&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/ray-project/ray&quot;&gt;Ray&lt;/a&gt; is a fast and simple framework for building and running distributed applications. Ray leverages &lt;a href=&quot;https://arrow.apache.org/&quot;&gt;Apache Arrow&lt;/a&gt; for efficient data handling and provides &lt;strong&gt;task&lt;/strong&gt; and &lt;strong&gt;actor&lt;/strong&gt; abstractions for distributed computing. It can&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;ol&gt;
+    &lt;li&gt;
+      &lt;p&gt;Running the same code on more than one machine.&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;p&gt;Building microservices and actors that have state and can communicate.&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;p&gt;Gracefully handling &lt;a href=&quot;https://ray.readthedocs.io/en/latest/fault-tolerance.html&quot;&gt;machine failures&lt;/a&gt;.&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;p&gt;Efficiently handling &lt;a href=&quot;https://ray-project.github.io/2017/10/15/fast-python-serialization-with-ray-and-arrow.html&quot;&gt;large objects and numerical data&lt;/a&gt;.&lt;/p&gt;
+
+      &lt;p&gt;&lt;a href=&quot;https://towardsdatascience.com/modern-parallel-and-distributed-python-a-quick-tutorial-on-ray-99f8d70369b8&quot;&gt;more here&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;h3&gt;2.3 Joblib&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/joblib/joblib&quot;&gt;Joblib&lt;/a&gt; joblib is a parallel processing library for python which was developed by many of the same people who work on scikit-learn, and is widely used inside scikit-learn to parallelize some of their algorithms. It is built on top of the multiprocessing and multithreading libraries in order to support both but has a significant portion of additional features. One of the biggest ones is the ability to use a pool of workers like a context manager which can be reused across many tasks to be parallelized.&lt;/p&gt;
+
+&lt;h3&gt;2.4 futures&lt;/h3&gt;
+
+&lt;p&gt;As stated in the documentation, &lt;a href=&quot;https://docs.python.org/3/library/concurrent.futures.html#processpoolexecutor&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;concurrent.futures.ProcessPoolExecutor&lt;/code&gt;&lt;/a&gt; is a wrapper around a &lt;code class=&quot;highlighter-rouge&quot;&gt;multiprocessing.Pool&lt;/code&gt;. As such, the same limitations of &lt;code class=&quot;highlighter-rouge&quot;&gt;multiprocessing&lt;/code&gt; apply (e.g. objects need to be pickleable).&lt;/p&gt;
+
+&lt;h2&gt;3. Benchmarks&lt;/h2&gt;
+&lt;h3&gt;3.1 Benchmark on data pipeline&lt;/h3&gt;
+
+&lt;h4&gt;3.1.1 sample code&lt;/h4&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;'''
+ray
+'''&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;np&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;psutil&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;ray&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;scipy.signal&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;num_cpus&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;psutil&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cpu_count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;logical&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ray&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num_cpus&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num_cpus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;nd&quot;&gt;@ray.remote&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;random_filter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# Do some image processing.&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scipy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;signal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;convolve2d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;random_filter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[::&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;filters&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;normal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num_cpus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Time the code below.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;zeros&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;image_id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ray&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;put&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;ray&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;remote&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;image_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;filters&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num_cpus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)])&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ray&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shutdown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;s&quot;&gt;'''
+multiprocessing
+'''&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;multiprocessing&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Pool&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;np&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;psutil&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;scipy.signal&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;num_cpus&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;psutil&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cpu_count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;logical&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;random_filter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# Do some image processing.&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scipy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;signal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;convolve2d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;random_filter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[::&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;pool&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Pool&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num_cpus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;filters&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;normal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num_cpus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Time the code below.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;zeros&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;pool&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;zip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num_cpus&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;filters&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+
+&lt;span class=&quot;s&quot;&gt;'''
+joblib
+'''&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;joblib&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Parallel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;delayed&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;np&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;psutil&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;scipy.signal&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;num_cpus&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;psutil&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cpu_count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;logical&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;random_filter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# Do some image processing.&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scipy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;signal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;convolve2d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;random_filter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[::&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;filters&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;normal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num_cpus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;pool&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Parallel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num_cpus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;zeros&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;pool&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;delayed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;filters&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]))&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num_cpus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+
+&lt;span class=&quot;s&quot;&gt;'''
+pathos
+'''&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pathos.multiprocessing&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Pool&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;np&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;psutil&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;scipy.signal&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;num_cpus&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;psutil&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cpu_count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;logical&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;random_filter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# Do some image processing.&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scipy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;signal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;convolve2d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;random_filter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[::&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;pool&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Pool&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num_cpus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;filters&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;normal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num_cpus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Time the code below.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;zeros&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;pool&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;zip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num_cpus&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;filters&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+
+&lt;span class=&quot;s&quot;&gt;'''
+futures
+'''&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;concurrent.futures&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;np&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;psutil&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;scipy.signal&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;num_cpus&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;psutil&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cpu_count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;logical&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;random_filter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# Do some image processing.&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scipy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;signal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;convolve2d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;random_filter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[::&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;executor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;concurrent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;futures&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ProcessPoolExecutor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;max_workers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num_cpus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;filters&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;normal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num_cpus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Time the code below.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;zeros&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;executor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;zip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num_cpus&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;filters&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;executor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shutdown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;s&quot;&gt;'''
+serial
+'''&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;np&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;psutil&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;scipy.signal&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;num_cpus&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;psutil&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cpu_count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;logical&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;random_filter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# Do some image processing.&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scipy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;signal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;convolve2d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;random_filter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[::&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;filters&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;normal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num_cpus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Time the code below.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;zeros&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num_cpus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;filters&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4&gt;3.1.2 Results&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;data:image/png;base64,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&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;h3&gt;3.3 Stability test&lt;/h3&gt;
+
+&lt;h4&gt;3.3.1 Segmentation Fault&lt;/h4&gt;
+
+&lt;p&gt;​	According to &lt;a href=&quot;https://github.com/apache/arrow/issues/2511&quot;&gt;this link&lt;/a&gt;, we can reproduce the segmentation fault by the following procedure:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Create a partitioned dataset with the following code:&lt;/p&gt;
+
+    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;np&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pandas&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pd&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pyarrow&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pa&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pyarrow.parquet&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pq&lt;/span&gt;
+   
+&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DataFrame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;'one'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;2.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;29.2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;'two'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;'three'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;table&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pa&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Table&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;from_pandas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;pq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write_to_dataset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;root_path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'./example_dataset'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;partition_cols&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'one'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'two'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Create a Parquet file from a PyArrow Table created from the partitioned Parquet dataset:&lt;/p&gt;
+
+    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pyarrow.parquet&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pq&lt;/span&gt;
+   
+&lt;span class=&quot;n&quot;&gt;table&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ParquetDataset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'./example_dataset'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;pq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write_table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'./example.parquet'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Run the above code in Jupyter Notebook would result in kernel die (due to segmentation fault):&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/posts/multi-image/4.png&quot; alt=&quot;image-20191128173245077&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Ray&lt;/p&gt;
+
+    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;ray&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;psutil&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;num_cpus&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;psutil&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cpu_count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;logical&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ray&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num_cpus&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num_cpus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# process data, build features&lt;/span&gt;
+&lt;span class=&quot;nd&quot;&gt;@ray.remote&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;run_res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pyarrow.parquet&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pq&lt;/span&gt;
+  
+        &lt;span class=&quot;n&quot;&gt;table&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ParquetDataset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'./dataset'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;pq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write_table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'./example.parquet'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;except&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;
+      
+&lt;span class=&quot;n&quot;&gt;res&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ray&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run_res&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;remote&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;No error appeared for the above code using Ray.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Multiprocessing, Pathos&lt;/p&gt;
+
+    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pathos.multiprocessing&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Pool&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# from multiprocessing import Pool&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;run_res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pyarrow.parquet&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pq&lt;/span&gt;
+  
+        &lt;span class=&quot;n&quot;&gt;table&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ParquetDataset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'./dataset'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;pq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write_table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'./example.parquet'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;except&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;
+  
+&lt;span class=&quot;n&quot;&gt;pool&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Pool&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;pool&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;starmap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run_res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;The above code hangs forever…&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Futures&lt;/p&gt;
+
+    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;concurrent.futures&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;executor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;concurrent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;futures&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ProcessPoolExecutor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;max_workers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;run_res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pyarrow.parquet&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pq&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;table&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ParquetDataset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'./dataset'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;pq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write_table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'./example.parquet'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;except&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;
+  
+&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;executor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run_res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)])&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;executor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shutdown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;No error appeared for the above code using futures.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Joblib&lt;/p&gt;
+
+    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;joblib&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Parallel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;delayed&lt;/span&gt;
+  
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;run_res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pyarrow.parquet&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pq&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;table&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ParquetDataset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'./dataset'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;pq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write_table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'./example.parquet'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;except&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;
+  
+&lt;span class=&quot;n&quot;&gt;pool&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Parallel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;pool&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;delayed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run_res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/posts/multi-image/5.png&quot; alt=&quot;image-20191128173543027&quot; /&gt;&lt;/p&gt;
+
+    &lt;p&gt;An segmentation fault would be triggered when using Joblib&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;3.3.2 sys exit&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Ray&lt;/p&gt;
+
+    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;ray&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;psutil&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;num_cpus&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;psutil&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cpu_count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;logical&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ray&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num_cpus&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num_cpus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sys&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# process data, build features&lt;/span&gt;
+&lt;span class=&quot;nd&quot;&gt;@ray.remote&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'now exiting'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;exit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      
+&lt;span class=&quot;n&quot;&gt;res&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ray&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;remote&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;An error would be triggered:&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;RayWorkerError: The worker died unexpectedly &lt;span class=&quot;k&quot;&gt;while &lt;/span&gt;executing this task.
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Multiprocessing, Pathos&lt;/p&gt;
+
+    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sys&lt;/span&gt;
+   &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pathos.multiprocessing&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ProcessingPool&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Pool&lt;/span&gt;
+   &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+       &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+       &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+           &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'now exiting'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+           &lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;exit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+   &lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Pool&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pool&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+       &lt;span class=&quot;n&quot;&gt;res&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pool&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+   &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;The above code would hang forever…&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Futures&lt;/p&gt;
+
+    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sys&lt;/span&gt;
+   &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;concurrent.futures&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ProcessPoolExecutor&lt;/span&gt;
+   &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+       &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+       &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+           &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'now exiting'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+           &lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;exit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+   &lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ProcessPoolExecutor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pool&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+       &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;res&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pool&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]):&lt;/span&gt;
+           &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;Message in the result:&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;An exception has occurred, use %tb to see the full traceback.
+  
+SystemExit: 1
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Joblib&lt;/p&gt;
+
+    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;joblib&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Parallel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;delayed&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sys&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'now exiting'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;exit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  
+&lt;span class=&quot;n&quot;&gt;pool&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Parallel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;pool&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;delayed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;Message in the result:&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;An exception has occurred, use %tb to see the full traceback.
+  
+SystemExit: 1
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;4. Summary&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Package&lt;/th&gt;
+      &lt;th&gt;no pickle issue&lt;/th&gt;
+      &lt;th&gt;no seg fault&lt;/th&gt;
+      &lt;th&gt;no sys exit hang&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Ray&lt;/td&gt;
+      &lt;td&gt;✔️&lt;/td&gt;
+      &lt;td&gt;✔️&lt;/td&gt;
+      &lt;td&gt;✔️&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Futures&lt;/td&gt;
+      &lt;td&gt;❌&lt;/td&gt;
+      &lt;td&gt;✔️&lt;/td&gt;
+      &lt;td&gt;✔️&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Multiprocessing&lt;/td&gt;
+      &lt;td&gt;❌&lt;/td&gt;
+      &lt;td&gt;❌&lt;/td&gt;
+      &lt;td&gt;❌&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Pathos&lt;/td&gt;
+      &lt;td&gt;✔️&lt;/td&gt;
+      &lt;td&gt;❌&lt;/td&gt;
+      &lt;td&gt;❌&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Joblib&lt;/td&gt;
+      &lt;td&gt;✔️&lt;/td&gt;
+      &lt;td&gt;❌&lt;/td&gt;
+      &lt;td&gt;✔️&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2&gt;5. References&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://towardsdatascience.com/modern-parallel-and-distributed-python-a-quick-tutorial-on-ray-99f8d70369b8&quot;&gt;https://towardsdatascience.com/modern-parallel-and-distributed-python-a-quick-tutorial-on-ray-99f8d70369b8&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://towardsdatascience.com/10x-faster-parallel-python-without-python-multiprocessing-e5017c93cce1&quot;&gt;https://towardsdatascience.com/10x-faster-parallel-python-without-python-multiprocessing-e5017c93cce1&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://yuanjiang.space/pathos-solves-PicklingError-for-multiprocessing&quot;&gt;https://yuanjiang.space/pathos-solves-PicklingError-for-multiprocessing&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://github.com/apache/arrow/issues/2511&quot;&gt;https://github.com/apache/arrow/issues/2511&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Tue, 26 Nov 2019 16:32:02 +0800</pubDate>
+        <link>http://localhost:4000/blog/2019/Multiporcessing-in-Python/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2019/Multiporcessing-in-Python/</guid>
+        
+        <category>Python</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Data structure problems summary</title>
+        <description>&lt;p&gt;Recently I reviewed all the problems (around 160 till now) I solved from Leetcode and categorized them based on the topic. Below are the results (in Chinese). I’m going to sort out all the solutions for these problems in my posts (hopefully I can post them all).&lt;/p&gt;
+
+&lt;h2&gt;Array and Strings:&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/posts/ds/array_str.png&quot; alt=&quot;array_str&quot; /&gt;&lt;/p&gt;
+
+&lt;h2&gt;Tree&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/posts/ds/tree.png&quot; alt=&quot;tree&quot; /&gt;&lt;/p&gt;
+
+&lt;h2&gt;Linked list&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/posts/ds/linked_list.png&quot; alt=&quot;tree&quot; /&gt;&lt;/p&gt;
+
+&lt;h2&gt;Sorting&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/posts/ds/sorting.png&quot; alt=&quot;sorting&quot; /&gt;&lt;/p&gt;
+
+&lt;h2&gt;Dynamic programming&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/posts/ds/dp.png&quot; alt=&quot;dp&quot; /&gt;&lt;/p&gt;
+
+&lt;h2&gt;Problem solving templates&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/posts/ds/templates.png&quot; alt=&quot;templates&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 31 Oct 2019 15:22:16 +0800</pubDate>
+        <link>http://localhost:4000/blog/2019/data-structures-summary/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2019/data-structures-summary/</guid>
+        
+        <category>Data structures</category>
+        
+        <category>Xmind</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>NLP embedding methods</title>
+        <description>&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/posts/NLP_embeddings.png&quot; alt=&quot;Division algorithm&quot; /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 10 Oct 2019 11:43:16 +0800</pubDate>
+        <link>http://localhost:4000/blog/2019/NLP-embedding-methods/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2019/NLP-embedding-methods/</guid>
+        
+        <category>Machine Learning</category>
+        
+        <category>Xmind</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Dialogue system</title>
+        <description>&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/posts/Dialogue_system.png&quot; alt=&quot;Division algorithm&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;From paper “Neural Approaches to Conversational AI Question Answering, Task-Oriented Dialogues and Social Chatbots”&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 10 Oct 2019 11:37:07 +0800</pubDate>
+        <link>http://localhost:4000/blog/2019/Dialogue-system/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2019/Dialogue-system/</guid>
+        
+        <category>Machine Learning</category>
+        
+        <category>Xmind</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Recommendation system</title>
+        <description>&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/posts/rs.png&quot; alt=&quot;Division algorithm&quot; /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 10 Oct 2019 11:27:02 +0800</pubDate>
+        <link>http://localhost:4000/blog/2019/recommendation-system/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2019/recommendation-system/</guid>
+        
+        <category>Machine Learning</category>
+        
+        <category>Xmind</category>
+        
+        
+      </item>
     
       <item>
         <title>K nearest neighbors</title>
@@ -65,7 +818,7 @@ MathJax.Hub.Config({
 \end{equation}&lt;/script&gt;
 
 </description>
-        <pubDate>Thu, 23 May 2019 17:02:24 +0800</pubDate>
+        <pubDate>Tue, 11 Jun 2019 17:02:24 +0800</pubDate>
         <link>http://localhost:4000/blog/2019/knn/</link>
         <guid isPermaLink="true">http://localhost:4000/blog/2019/knn/</guid>
         
@@ -505,15 +1258,15 @@ sudo semodule -i mynginx.pp
 &lt;h2&gt;Credits&lt;/h2&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-uwsgi-and-nginx-on-centos-7&lt;/p&gt;
+  &lt;p&gt;&lt;a href=&quot;https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-uwsgi-and-nginx-on-centos-7&quot;&gt;https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-uwsgi-and-nginx-on-centos-7&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;https://serverfault.com/questions/777749/how-to-disable-timeout-for-nginx&lt;/p&gt;
+  &lt;p&gt;&lt;a href=&quot;https://serverfault.com/questions/777749/how-to-disable-timeout-for-nginx&quot;&gt;https://serverfault.com/questions/777749/how-to-disable-timeout-for-nginx&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;https://stackoverflow.com/questions/41328451/ssl-module-in-python-is-not-available-when-installing-package-with-pip3&lt;/p&gt;
+  &lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/41328451/ssl-module-in-python-is-not-available-when-installing-package-with-pip3&quot;&gt;https://stackoverflow.com/questions/41328451/ssl-module-in-python-is-not-available-when-installing-package-with-pip3&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 </description>
@@ -633,435 +1386,6 @@ p(w,z)=\int p(\theta)\bigg(\prod_{n=1}^{N}p(z_{n}|\theta)p(w_{n}|z_{n})\bigg)d\t
         <category>Machine Learning</category>
         
         <category>NLP</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>64 bits division implemented on x86</title>
-        <description>&lt;p&gt;First I want to sort out some interesting projects or pieces of code that I worked on during my Bachelor study @ &lt;a href=&quot;http://ev.buaa.edu.cn/&quot;&gt;Beihang University&lt;/a&gt;. This code was implemented by me during the course “X86 Assembly Language Programming”, this is an extra curricular assignment.&lt;/p&gt;
-
-&lt;p&gt;The requirement is to implement a 64-bit division program on x86 Assembly. The input is two 64 bits numbers, and output the quotient and the remainder.&lt;/p&gt;
-
-&lt;p&gt;Here is the code:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-assembly&quot; data-lang=&quot;assembly&quot;&gt;STACK		SEGMENT	PARA STACK
-		DB	100H DUP(?)
-STACK_BTM	EQU	$ - STACK_AREA
-STACK		ENDS
-
-DATA		SEGMENT		PARA
-dividend_lo	DD		12061165H	;lower 32 bits of the dividend
-dividend_hi	DD		12061165H	;higher 32 bits of the dividend
-
-divisor_lo1	DD		0H	
-divisor_lo2	DD		0H	
-
-divisor_hi1	DD		12345678H	;divisor
-divisor_hi2	DD		0H		;divisor
-
-quotient_lo	DD		0H	;quotient
-quotient_hi	DD		0H	;quotient
-
-remainder_lo1	DD		0H	;remainder
-remainder_lo2	DD		0H	;remainder
-remainder_hi1	DD		0H	
-remainder_hi2	DD		0H	
-
-
-
-DATA		ENDS
-
-CODE		SEGMENT		PARA
-		ASSUME	CS:CODE,DS:DATA,SS:STACK
-
-MAIN		PROC	FAR
-
-		MOV	AX,DATA
-		MOV	DS,AX
-
-		XOR	DL,DL
-							;check whether the divisor is 0
-		MOV	AX,WORD PTR divisor_hi1+2
-		CMP	AX,0
-		JZ	N_1
-		INC	DL
-
-N_1:		MOV	AX,WORD PTR divisor_hi1
-		CMP	AX,0
-		JZ	N_2
-		INC	DL
-
-N_2:		MOV	AX,WORD PTR divisor_hi2+2
-		CMP	AX,0
-		JZ	N_3
-		INC	DL
-
-N_3:		MOV	AX,WORD PTR divisor_hi2
-		CMP	AX,0
-		JZ	N_4
-		INC	DL
-
-
-N_4:		CMP	DL,0
-		JZ	EXIT
-
-		MOV	AX,WORD PTR dividend_hi+2
-		MOV	WORD PTR remainder_lo2+2,AX
-		MOV	AX,WORD PTR dividend_hi
-		MOV	WORD PTR remainder_lo2,AX
-		MOV	AX,WORD PTR dividend_lo+2
-		MOV	WORD PTR remainder_lo1+2,AX
-		MOV	AX,WORD PTR dividend_lo
-		MOV	WORD PTR remainder_lo1,AX
-		MOV	CX,0H
-
-
-SSUUBB:		MOV	DX,WORD PTR remainder_lo1+2	
-		MOV	AX,WORD PTR remainder_lo1
-		PUSH	DX
-		PUSH	AX
-		SUB	AX,WORD PTR divisor_lo1
-		SBB	DX,WORD PTR divisor_lo1+2
-		MOV	WORD PTR remainder_lo1,AX
-		MOV	WORD PTR remainder_lo1+2,DX
-
-		MOV	DX,WORD PTR remainder_lo2+2	
-		MOV	AX,WORD PTR remainder_lo2
-		PUSH	DX
-		PUSH	AX
-		SBB	AX,WORD PTR divisor_lo2
-		SBB	DX,WORD PTR divisor_lo2+2
-		MOV	WORD PTR remainder_lo2,AX
-		MOV	WORD PTR remainder_lo2+2,DX	
-
-		MOV	DX,WORD PTR remainder_hi1+2	
-		MOV	AX,WORD PTR remainder_hi1
-		PUSH	DX
-		PUSH	AX
-		SBB	AX,WORD PTR divisor_hi1
-		SBB	DX,WORD PTR divisor_hi1+2
-		MOV	WORD PTR remainder_hi1,AX
-		MOV	WORD PTR remainder_hi1+2,DX
-
-		MOV	DX,WORD PTR remainder_hi2+2	
-		MOV	AX,WORD PTR remainder_hi2
-		PUSH	DX
-		PUSH	AX
-		SBB	AX,WORD PTR divisor_hi2
-		SBB	DX,WORD PTR divisor_hi2+2
-		MOV	WORD PTR remainder_hi2,AX
-		MOV	WORD PTR remainder_hi2+2,DX
-	
-		JC	RESTORE
-		CALL	LEFT_SHIFT_1
-		JMP	SSUUBB_END
-		
-SSUUBB_END:	CALL	RIGHT_SHIFT
-
-		INC	CX
-		CMP	CX,65
-		JZ	EXIT
-		JMP	SSUUBB
-		
-
-
-
-RESTORE:	POP	WORD PTR remainder_hi2
-		POP	WORD PTR remainder_hi2+2
-		POP	WORD PTR remainder_hi1
-		POP	WORD PTR remainder_hi1+2
-		POP	WORD PTR remainder_lo2
-		POP	WORD PTR remainder_lo2+2
-		POP	WORD PTR remainder_lo1
-		POP	WORD PTR remainder_lo1+2
-		
-		CALL	LEFT_SHIFT_0
-		JMP	SSUUBB_END
-
-
-EXIT:		MOV	AX,4C00H
-		INT	21H
-
-MAIN		ENDP
-
-LEFT_SHIFT_0	PROC					;left shift the quotient, and set the last bit of it to 1
-		MOV	AX,WORD PTR quotient_lo
-		SHL	AX,1
-		MOV	DL,0H
-		MOV	DH,0H
-		MOV	WORD PTR quotient_lo,AX
-		JC	A_10
-		JMP	S_20
-A_10:		MOV	DL,1H
-
-S_20:		MOV	AX,WORD PTR quotient_lo+2
-		SHL	AX,1
-		JC	A_20
-P1:		OR	AL,DL
-		MOV	DL,0H
-		MOV	WORD PTR quotient_lo+2,AX
-		
-		JMP	S_30
-A_20:		MOV	DH,1H
-		JMP	P1
-
-S_30:		MOV	AX,WORD PTR quotient_hi
-		SHL	AX,1
-		JC	A_30
-P2:		OR	AL,DH
-		MOV	DH,0H
-		MOV	WORD PTR quotient_hi,AX
-		
-		JMP	S_40
-A_30:		MOV	DL,1H
-		JMP	P2
-
-S_40:		MOV	AX,WORD PTR quotient_hi+2
-		SHL	AX,1
-		OR	AL,DL
-		MOV	WORD PTR quotient_hi+2,AX
-
-		RET
-LEFT_SHIFT_0	ENDP
-
-LEFT_SHIFT_1	PROC					;left shift the quotient, and set the last bit of it to 1
-		MOV	AX,WORD PTR quotient_lo
-		SHL	AX,1
-		MOV	DH,0H
-		MOV	DL,0H
-		JC	A_1
-M1:		OR	AL,1H
-		MOV	WORD PTR quotient_lo,AX
-		JMP	S_2
-
-A_1:		MOV	DL,1H
-		JMP	M1
-
-S_2:		MOV	AX,WORD PTR quotient_lo+2
-		SHL	AX,1
-		JC	A_2
-M2:		OR	AL,DL
-		MOV	DL,0H
-		MOV	WORD PTR quotient_lo+2,AX
-		
-		JMP	S_3
-A_2:		MOV	DH,1H
-		JMP	M2
-
-S_3:		MOV	AX,WORD PTR quotient_hi
-		SHL	AX,1
-		JC	A_3
-M3:		OR	AL,DH
-		MOV	DH,0H
-		MOV	WORD PTR quotient_hi,AX
-		
-		JMP	S_4
-A_3:		MOV	DL,1H
-		JMP	M3
-
-S_4:		MOV	AX,WORD PTR quotient_hi+2
-		SHL	AX,1
-		OR	AL,DL
-		MOV	WORD PTR quotient_hi+2,AX
-
-		RET
-LEFT_SHIFT_1	ENDP
-
-RIGHT_SHIFT	PROC					;right shift the divisor
-		MOV	AX,WORD PTR divisor_hi2+2
-		SHR	AX,1
-		MOV	DH,0H
-		MOV	DL,0H
-		MOV	WORD PTR divisor_hi2+2,AX
-		JC	A_11
-		JMP	S_21
-A_11:		MOV	DH,80H
-		JMP	S_21
-
-S_21:		MOV	AX,WORD PTR divisor_hi2
-		SHR	AX,1
-		JC	A_21
-Z1:		OR	AH,DH
-		MOV	DH,0H
-		MOV	WORD PTR divisor_hi2,AX
-		
-		JMP	S_31
-A_21:		MOV	DL,80H
-		JMP	Z1
-
-S_31:		MOV	AX,WORD PTR divisor_hi1+2
-		SHR	AX,1
-		JC	A_31
-Z2:		OR	AH,DL
-		MOV	DL,0H
-		MOV	WORD PTR divisor_hi1+2,AX
-		
-		JMP	S_41
-A_31:		MOV	DH,80H
-		JMP	Z2
-
-S_41:		MOV	AX,WORD PTR divisor_hi1
-		SHR	AX,1
-		JC	A_41
-Z3:		OR	AH,DH
-		MOV	DH,0H
-		MOV	WORD PTR divisor_hi1,AX
-		
-		JMP	S_51
-A_41:		MOV	DL,80H
-		JMP	Z3
-
-S_51:		MOV	AX,WORD PTR divisor_lo2+2
-		SHR	AX,1
-		JC	A_51
-Z4:		OR	AH,DL
-		MOV	DL,0H
-		MOV	WORD PTR divisor_lo2+2,AX
-		
-		JMP	S_61
-A_51:		MOV	DH,80H
-		JMP	Z4
-
-S_61:		MOV	AX,WORD PTR divisor_lo2
-		SHR	AX,1
-		JC	A_61
-Z5:		OR	AH,DH
-		MOV	DH,0H
-		MOV	WORD PTR divisor_lo2,AX
-		
-		JMP	S_71
-A_61:		MOV	DL,80H
-		JMP	Z5
-
-S_71:		MOV	AX,WORD PTR divisor_lo1+2
-		SHR	AX,1
-		JC	A_71
-Z6:		OR	AH,DL
-		MOV	DL,0H
-		MOV	WORD PTR divisor_lo1+2,AX
-		
-		JMP	S_81
-A_71:		MOV	DH,80H
-		JMP	Z6
-
-S_81:		MOV	AX,WORD PTR divisor_lo1
-		SHR	AX,1
-		OR	AH,DH
-		MOV	WORD PTR divisor_lo1,AX
-		RET
-RIGHT_SHIFT	ENDP
-
-CODE		ENDS
-		END	MAIN&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;We first check if the divisor is 0, if it is 0, we exit the whole program.&lt;/p&gt;
-
-&lt;p&gt;If not, we do the division in the following iteration:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;First use the dividend minus the divisor, and store the result in the quotient register.&lt;/li&gt;
-  &lt;li&gt;Then compare the quotient with 0:
-    &lt;ol&gt;
-      &lt;li&gt;If it is smaller than 0, add the divisor to the quotient register to restore the original value, and store this value in the quotient register, then left shift the quotient register, and set the last bit to 0.&lt;/li&gt;
-      &lt;li&gt;Else left shift the quotient register, and set the last bit to 1.&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Right shift the divisor register.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;We do this iteration for 64 times to get the result.&lt;/p&gt;
-
-&lt;p&gt;This is a common algorithm for division in lower level of a computer, and it can be found in many textbooks for computer structure. e.g.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/posts/division.png&quot; alt=&quot;Division algorithm&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Note that this figure was from &lt;em&gt;“Patterson, David A., and John L. Hennessy. Computer organization and design: the hardware/software interface.&lt;/em&gt; 3rd edition”.&lt;/p&gt;
-</description>
-        <pubDate>Fri, 12 May 2017 01:30:58 +0800</pubDate>
-        <link>http://localhost:4000/blog/2017/64bit-division-on-x86/</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2017/64bit-division-on-x86/</guid>
-        
-        <category>x86</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Jekyll blog setup</title>
-        <description>&lt;p&gt;The OS I’m now using is &lt;a href=&quot;https://www.linuxmint.com/&quot;&gt;Linux Mint 18&lt;/a&gt;, and I set up this environment right after the installment of the OS.&lt;/p&gt;
-&lt;h3&gt;Jekyll environment setup&lt;/h3&gt;
-
-&lt;p&gt;First update ruby:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo apt-get update ruby&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Then install Jekyll and Bundler gems through RubyGems&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;gem install jekyll bundler&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;If everything is set up, then just run&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;jekyll new myblog&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;This will create a folder &lt;strong&gt;myblog&lt;/strong&gt; which contains all the files you need to run a blog. Then chage into this new directory and run&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;~/myblog &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll serve&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Then the blog will be hosted locally on http://localhost:4000.&lt;/p&gt;
-
-&lt;p&gt;Some errors I encountered:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;An error occurred while installing ffi (1.9.18), and Bundler cannot
-continue. Make sure that &lt;code class=&quot;highlighter-rouge&quot;&gt;gem install ffi -v '1.9.18'&lt;/code&gt; succeeds before bundling.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;In order to install ffi, first make sure you have ruby-dev and the corresponding system dependencies installed:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo apt-get install libpcre3 libpcre3-dev
-&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo apt-get install ruby-dev&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;then install ffi:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;gem install ffi -v &lt;span class=&quot;s1&quot;&gt;'1.9.18'&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h3&gt;Host on Github with custom domain&lt;/h3&gt;
-&lt;p&gt;First create a repository named &lt;strong&gt;username.github.io&lt;/strong&gt;, where &lt;strong&gt;username&lt;/strong&gt; is the user name of the account. Then commit all the files generated by Jekyll to this repository, then you can get access to it through &lt;em&gt;http://username.github.io&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;If you want to use a custom domain, then you have to create a file named &lt;strong&gt;CNAME&lt;/strong&gt; in the site’s repository, put your domain name in this file. Add the following DNS to your domain’s DNS setting.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;192.30.252.153 &lt;br /&gt;
-        192.30.252.154&lt;/p&gt;
-&lt;/blockquote&gt;
-
-</description>
-        <pubDate>Mon, 08 May 2017 02:43:31 +0800</pubDate>
-        <link>http://localhost:4000/blog/2017/blog-setup/</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2017/blog-setup/</guid>
-        
-        <category>Linux</category>
-        
-        
-        <category>assignments</category>
-        
-      </item>
-    
-      <item>
-        <title>My first post</title>
-        <description>&lt;p&gt;So finally I plan to sort out the projects I worked on and the experiences I have had during these years.&lt;/p&gt;
-
-&lt;p&gt;Recently I have to use KNN benchmark from &lt;a href=&quot;https://github.com/erikbern/ann-benchmarks&quot;&gt;this repository&lt;/a&gt;, unfortunately the environment of some part of it can only be set up on linux. Moreover, the Linux system on my desktop PC has crashed, so I have to install Linux and set up many environments again. This leads to the idea to set up this blog for myself.&lt;/p&gt;
-
-&lt;p&gt;The system I’m now using is &lt;a href=&quot;https://www.linuxmint.com/&quot;&gt;Linux Mint 18&lt;/a&gt;, which has an interface much more better than Ubuntu.&lt;/p&gt;
-
-</description>
-        <pubDate>Mon, 08 May 2017 01:05:24 +0800</pubDate>
-        <link>http://localhost:4000/blog/2017/first-post/</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2017/first-post/</guid>
-        
-        <category>Linux</category>
         
         
       </item>

@@ -1,3 +1,11 @@
+---
+layout: post
+title: "MS interview"
+date: 2019-12-09 13:50:07 +0800
+tags: 
+- interview
+---
+
 ## 面试流程
 
 下面是我这次微软面试之旅的整个流程。从第一次沟通到最终收到正式offer，整个时间跨了5个月…不过等待是值得的，最终收获到了心仪的offer。
@@ -44,11 +52,43 @@ on site约的是10.28的北京on site面试。当时还比较困惑为什么苏�
 
 ## on site
 <html>
-<img class="mySlides" src="{{site.url}}/images/posts/ms/IMG_3314.jpg">
-<img class="mySlides" src="{{site.url}}/images/posts/ms/IMG_3315.jpg">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+<div class="w3-content w3-display-container">
+
+<div class="w3-display-container mySlides">
+  <img src="{{site.url}}/images/posts/ms/IMG_3314.jpg" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+    杭州东站，出发~
+  </div>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="{{site.url}}/images/posts/ms/IMG_3315.jpg" style="width:100%">
+  <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+    本来可以去vip候车区，结果太早了没开门…
+  </div>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="{{site.url}}/images/posts/ms/IMG_3316.jpg" style="width:100%">
+  <div class="w3-display-topleft w3-large w3-container w3-padding-16 w3-black">
+    候车出发~
+  </div>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="{{site.url}}/images/posts/ms/IMG_3318.jpg" style="width:100%">
+  <div class="w3-display-topright w3-large w3-container w3-padding-16 w3-black">
+    复兴号高铁还是很快的
+  </div>
+</div>
+
+<button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+<button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+
+</div>
+
 <script>
 var slideIndex = 1;
 showDivs(slideIndex);
@@ -61,42 +101,84 @@ function showDivs(n) {
   var i;
   var x = document.getElementsByClassName("mySlides");
   if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length} ;
+  if (n < 1) {slideIndex = x.length}
   for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
+     x[i].style.display = "none";  
   }
-  x[slideIndex-1].style.display = "block";
-}
-
-var slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length} ;
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  x[slideIndex-1].style.display = "block";
+  x[slideIndex-1].style.display = "block";  
 }
 </script>
 </html>
 
 
+早上6:30就出发去杭州东站做高铁了，下午一点多到达北京南。酒店就订在了中关村附近，下午在周围逛了逛。之前在北京上学的时候一直没来过微软大楼，今天算是见识了~
 
 
 
+<html>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
+<div class="w3-content w3-display-container">
 
+<div class="w3-display-container slides2">
+  <img src="{{site.url}}/images/posts/ms/IMG_3325.jpg" style="width:100%">
+  <div class="w3-display-topright w3-large w3-container w3-padding-16 w3-black">
+    微软大楼~
+  </div>
+</div>
 
+<div class="w3-display-container slides2">
+  <img src="{{site.url}}/images/posts/ms/IMG_3319.jpg" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+    地铁出发
+  </div>
+</div>
 
+<div class="w3-display-container slides2">
+  <img src="{{site.url}}/images/posts/ms/IMG_3320.jpg" style="width:100%">
+  <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+    中关村
+  </div>
+</div>
 
+<div class="w3-display-container slides2">
+  <img src="{{site.url}}/images/posts/ms/IMG_3322.jpg" style="width:100%">
+  <div class="w3-display-topleft w3-large w3-container w3-padding-16 w3-black">
+    落寞的小黄车
+  </div>
+</div>
 
+<div class="w3-display-container slides2">
+  <img src="{{site.url}}/images/posts/ms/IMG_3323.jpg" style="width:100%">
+  <div class="w3-display-topright w3-large w3-container w3-padding-16 w3-black">
+    创业大街~当年也是在这边聊过好多次创业项目
+  </div>
+</div>
+
+<button class="w3-button w3-display-left w3-black" onclick="plusDivs2(-1)">&#10094;</button>
+<button class="w3-button w3-display-right w3-black" onclick="plusDivs2(1)">&#10095;</button>
+
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs2(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("slides2");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+</html>
 
 
