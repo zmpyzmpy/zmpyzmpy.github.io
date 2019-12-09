@@ -79,26 +79,26 @@ on site约的是10.28的北京on site面试。当时还比较困惑为什么苏�
   </div>
 </div>
 
-<button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
-<button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+<button class="w3-button w3-display-left w3-black" onclick="plusDivs1(-1)">&#10094;</button>
+<button class="w3-button w3-display-right w3-black" onclick="plusDivs1(1)">&#10095;</button>
 
 </div>
 
 <script>
 var slideIndex = 1;
-showDivs(slideIndex);
+showDivs2(slideIndex);
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
+function plusDivs1(n) {
+  showDivs2(slideIndex += n);
 }
 
-function showDivs(n) {
+function showDivs2(n) {
   var i;
   var x = document.getElementsByClassName("mySlides");
   if (n > x.length) {slideIndex = 1}
   if (n < 1) {slideIndex = x.length}
   for (i = 0; i < x.length; i++) {
-​     x[i].style.display = "none";  
+    x[i].style.display = "none";  
   }
   x[slideIndex-1].style.display = "block";  
 }
@@ -157,19 +157,19 @@ function showDivs(n) {
 
 <script>
 var slideIndex = 1;
-showDivs(slideIndex);
+showDivs2(slideIndex);
 
 function plusDivs2(n) {
-  showDivs(slideIndex += n);
+  showDivs2(slideIndex += n);
 }
 
-function showDivs(n) {
+function showDivs2(n) {
   var i;
   var x = document.getElementsByClassName("slides2");
   if (n > x.length) {slideIndex = 1}
   if (n < 1) {slideIndex = x.length}
   for (i = 0; i < x.length; i++) {
-​     x[i].style.display = "none";  
+    x[i].style.display = "none";
   }
   x[slideIndex-1].style.display = "block";  
 }
