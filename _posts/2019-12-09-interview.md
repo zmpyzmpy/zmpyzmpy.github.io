@@ -6,27 +6,22 @@ tags:
 - interview
 ---
 
-## 面试流程
+## Interview process
 
-下面是我这次微软面试之旅的整个流程。从第一次沟通到最终收到正式offer，整个时间跨了5个月…不过等待是值得的，最终收获到了心仪的offer。
+Here is the entire process of my interview with Microsoft. From the first communication to the final receipt of the official offer, the entire time spanned 5 months... But the wait was worth it, and finally got the offer.
 
->6.18 第一次LinkedIn联系，后面告知不太匹配
->
->9.19 第二次LinkedIn联系
->
->9.23 流程开始
->
->10.10 电话面试
->
->10.23 告知电面通过，约on site面试
->
->10.28 on site四轮面试
->
->11.11 口头offer
->
->11.21 正式offer
+| Date  | Event                                      |
+| ----- | ------------------------------------------ |
+| 6.18  | First LinkedIn contact, was told not match |
+| 9.19  | Second LinkedIn contact                    |
+| 9.23  | Start of the process                       |
+| 10.10 | Phone interview                            |
+| 10.23 | Schedual for on site                       |
+| 10.28 | On site interview of 4 rounds              |
+| 11.11 | Verbal offer                                 |
+| 11.21 | Formal offer                               |
 
-## LinkedIn邀约
+## LinkedIn Invitation
 
 我的LinkedIn的主页一直都有在更新和维护的，中英文都有，并且上面附了详细的联系方式包括email和微信号。第一次的时候应该是微软的hr小姐姐搜到了我的主页，直接在上面找到了我的微信号加到了我。当时做了简单沟通之后推了一个MSRA的岗位给我，并且要求提供英文简历。那段时间一直在看国内大厂的机会，所以英文简历有段时间没更新了，晚上花了几个小时整理了一下，第二天就发过去了。之后经过了漫长的等待…一个月之后我的一个学姐从荷兰回来入职了苏州微软，说可以内推。这时我才想起来之前有投过一个岗位，问了下情况时候hr小姐姐表示简历投过去了，可能不太匹配就没有安排后续的面试了。
 
@@ -103,7 +98,7 @@ function showDivs(n) {
   if (n > x.length) {slideIndex = 1}
   if (n < 1) {slideIndex = x.length}
   for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";  
+​     x[i].style.display = "none";  
   }
   x[slideIndex-1].style.display = "block";  
 }
@@ -174,7 +169,7 @@ function showDivs(n) {
   if (n > x.length) {slideIndex = 1}
   if (n < 1) {slideIndex = x.length}
   for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";  
+​     x[i].style.display = "none";  
   }
   x[slideIndex-1].style.display = "block";  
 }
