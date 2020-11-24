@@ -1,10 +1,4 @@
----
-layout: post
-title: "MS interview"
-date: 2019-12-09 13:50:07 +0800
-tags: 
-- interview
----
+
 
 ## Interview process
 
